@@ -1,0 +1,29 @@
+\textbf{Adversarial camera and LiDAR-based attacks AVs}
+Attacks in perception sensors can be divided into two categories, camera-based attack, and object-based attack. The
+camera-based attack methods\cite{7, 9, 23} propose to hide the
+objects to be detected by adding adversarial patches. The attacker
+can apply different interference methods to enhance the
+robustness so that the objects won’t be detected from varying
+observation angles and distances. This camera-based attack
+aims to change the texture of the object\cite{msf-adv}. The Lidar-based
+attack methods\cite{4, 6, 19, 25} propose to spoof the LiDAR with
+injecting laser\cite{6}, finding vulnerable LiDAR detection locations\cite{25} or changing the shape of the 3D objects\cite{4}. This
+kind of attack can fool the LiDAR object detection mechanism,
+but it’s hard to spoof cameras as it aims to change the shapes
+instead of the texture of the object\cite{msf-adv}. 
+In these works, to mislead the neural network, some outstanding patterns are generated
+to cause the model to have a tendency towards specific outputs.
+
+\textbf{Defense towards the adversarial camera and LiDAR-based
+attacks in AVs}
+Defenses against these adversarial perception attacks also
+fall into two types. One kind of defense\cite{if-defense, 22, 24} aims to
+detect and recover the corrupted objects before they’re sent
+to the detection algorithm. The authors reconstruct the objects
+with implicit functions\cite{if-defense} or denoising and upsampling\cite{24}.
+Although these methods can achieve a good recovering rate,
+they focus on either camera-based attacks or object-based
+attack. The other kind of defense aims to fuse multiple sensors\cite{10, 15, 16, 21} to avoid the spoofed sensor guiding the
+detection output. These Multiple Sensor Fusion (MSF) algorithms integrate the image and LiDAR feature map 
+strategically to rely on the unattacked sensors.
+

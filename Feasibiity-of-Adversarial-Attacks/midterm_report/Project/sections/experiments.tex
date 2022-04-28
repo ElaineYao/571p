@@ -1,0 +1,14 @@
+\subsection{Experiment setup}
+
+For this project, we’ll use Baidu Apollo\cite{apollo} open-source AD
+system. It’s a widely-used industry-grade system equipped
+with the typical MSF algorithm. We’ll also use LGSVL simulator\cite{lgsvl}, an
+open-source simulator providing a virtual environment to test
+AV systems. To reproduce the attacks on camera and LiDAR,
+we use the Github repository\cite{msf-adv} provided by Cao \emph{et al.}. After
+generating adversarial objects with the tool mentioned, we’ll
+test our AV-based IF-defense\cite{if-defense} by processing the rendered 3D point cloud before feeding it into the pre-processing part in Figure
+
+As for the evaluation metric, we will measure 1) the detection accuracy of the adversarial obstacles
+, 2) the detection accuracy and false-positive of the overall obstacles, including the benign ones and adversarial ones.
+

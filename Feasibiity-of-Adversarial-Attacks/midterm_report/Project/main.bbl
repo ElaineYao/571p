@@ -1,0 +1,222 @@
+\begin{thebibliography}{10}
+
+\bibitem{apollo}
+Baidu apollo.
+\newblock \url{https://github.com/ApolloAuto/apollo}.
+\newblock Accessed: 2022-03-05.
+
+\bibitem{1}
+Companies are racing to make self-driving cars. but why?
+\newblock
+  \url{https://www.washingtonpost.com/outlook/2022/02/04/self-driving-cars-why}.
+\newblock Accessed: 2022-03-05.
+
+\bibitem{17}
+Taxonomy and definitions for terms related to driving automation systems for
+  on-road motor vehicles.
+
+\bibitem{implicit}
+1 implicit function theorems.
+\newblock 2019.
+
+\bibitem{4}
+Mazen Abdelfattah, Kaiwen Yuan, Z.~Jane Wang, and Rabab~Kreidieh Ward.
+\newblock Towards universal physical attacks on cascaded camera-lidar 3d object
+  detection models.
+\newblock In {\em ICIP}, 2021.
+
+\bibitem{mls}
+M.~Alexa, J.~Behr, D.~Cohen-Or, S.~Fleishman, D.~Levin, and C.T. Silva.
+\newblock Point set surfaces.
+\newblock {\em Proceedings of the Conference on Visualization}, 35-36:21--28,
+  2001.
+
+\bibitem{msf-adv}
+Yulong Cao, Ningfei Wang, Chaowei Xiao, Dawei Yang, Jin Fang, Ruigang Yang, {Qi
+  Alfred} Chen, Mingyan Liu, and Bo~Li.
+\newblock Invisible for both camera and lidar: Security of multi-sensor fusion
+  based perception in autonomous driving under physical-world attacks.
+\newblock Proceedings - IEEE Symposium on Security and Privacy, May 2021.
+
+\bibitem{6}
+Yulong Cao, Chaowei Xiao, Benjamin Cyr, Yimeng Zhou, Wonseok Park, Sara
+  Rampazzi, Qi~Alfred Chen, Kevin Fu, and Z.~Morley Mao.
+\newblock Adversarial sensor attack on lidar-based perception in autonomous
+  driving.
+\newblock {\em Proceedings of the 2019 ACM SIGSAC Conference on Computer and
+  Communications Security}, 2019.
+
+\bibitem{shapenet}
+Angel~X. Chang, Thomas Funkhouser, Leonidas Guibas, Pat Hanrahan, Qixing Huang,
+  Zimo Li, Silvio Savarese, Manolis Savva, Shuran Song, Hao Su, Jianxiong Xiao,
+  Li~Yi, and Fisher Yu.
+\newblock {ShapeNet: An Information-Rich 3D Model Repository}.
+\newblock Technical Report arXiv:1512.03012 [cs.GR], Stanford University ---
+  Princeton University --- Toyota Technological Institute at Chicago, 2015.
+
+\bibitem{7}
+Shang-Tse Chen and Jason Martin.
+\newblock Physical adversarial attack on object detectors ( extended abstract
+  ).
+\newblock 2018.
+
+\bibitem{8}
+Gintare~Karolina Dziugaite, Zoubin Ghahramani, and Daniel~M. Roy.
+\newblock A study of the effect of jpg compression on adversarial images.
+\newblock {\em ArXiv}, abs/1608.00853, 2016.
+
+\bibitem{9}
+Kevin Eykholt, I.~Evtimov, Earlence Fernandes, Bo~Li, Amir Rahmati, Florian
+  Tram{\`e}r, Atul Prakash, Tadayoshi Kohno, and Dawn~Xiaodong Song.
+\newblock Physical adversarial examples for object detectors.
+\newblock {\em ArXiv}, abs/1807.07769, 2018.
+
+\bibitem{10}
+Davi Frossard and Raquel Urtasun.
+\newblock End-to-end learning of multi-sensor 3d tracking by detection.
+\newblock {\em 2018 IEEE International Conference on Robotics and Automation
+  (ICRA)}, pages 635--642, 2018.
+
+\bibitem{dupnet}
+Hongxing Gao, Wei Tao, Dongchao Wen, Junjie Liu, Tse-Wei Chen, Kinya Osa, and
+  Masami Kato.
+\newblock Dupnet: Towards very tiny quantized cnn with improved accuracy for
+  face detection.
+\newblock {\em 2019 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition Workshops (CVPRW)}, pages 168--177, 2019.
+
+\bibitem{kitti}
+Andreas Geiger, Philip Lenz, Christoph Stiller, and Raquel Urtasun.
+\newblock Vision meets robotics: The kitti dataset.
+\newblock {\em The International Journal of Robotics Research}, 32:1231 --
+  1237, 2013.
+
+\bibitem{12}
+Chuan Guo, Mayank Rana, Moustapha Ciss{\'e}, and Laurens van~der Maaten.
+\newblock Countering adversarial images using input transformations.
+\newblock {\em ArXiv}, abs/1711.00117, 2018.
+
+\bibitem{point-cloud-survey}
+Yulan Guo, Hanyun Wang, Qingyong Hu, Hao Liu, Li~Liu, and Bennamoun.
+\newblock Deep learning for 3d point clouds: A survey.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  43:4338--4364, 2021.
+
+\bibitem{median-filter}
+Thomas~S. Huang, G~Yang, and G.~Tang.
+\newblock A fast two-dimensional median filtering algorithm.
+\newblock {\em IEEE Transactions on Acoustics, Speech, and Signal Processing},
+  27:13--18, 1979.
+
+\bibitem{13}
+Connie Khor~Li Kou, Hwee~Kuan Lee, Ee-Chien Chang, and Teck~Khim Ng.
+\newblock Enhancing transformation-based defenses against adversarial attacks
+  with a distribution classifier.
+\newblock In {\em ICLR}, 2020.
+
+\bibitem{14}
+Bin Liang, Hongcheng Li, Miaoqiang Su, Xirong Li, Wenchang Shi, and Xiaofeng
+  Wang.
+\newblock Detecting adversarial image examples in deep neural networks with
+  adaptive noise reduction.
+\newblock {\em IEEE Transactions on Dependable and Secure Computing},
+  18:72--85, 2021.
+
+\bibitem{15}
+Ming Liang, Binh Yang, Yun Chen, Rui Hu, and Raquel Urtasun.
+\newblock Multi-task multi-sensor fusion for 3d object detection.
+\newblock {\em 2019 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 7337--7345, 2019.
+
+\bibitem{16}
+Ming Liang, Binh Yang, Shenlong Wang, and Raquel Urtasun.
+\newblock Deep continuous fusion for multi-sensor 3d object detection.
+\newblock In {\em ECCV}, 2018.
+
+\bibitem{ONet}
+Lars~M. Mescheder, Michael Oechsle, Michael Niemeyer, Sebastian Nowozin, and
+  Andreas Geiger.
+\newblock Occupancy networks: Learning 3d reconstruction in function space.
+\newblock {\em 2019 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 4455--4465, 2019.
+
+\bibitem{ConvONet}
+Songyou Peng, Michael Niemeyer, Lars~M. Mescheder, Marc Pollefeys, and Andreas
+  Geiger.
+\newblock Convolutional occupancy networks.
+\newblock {\em ArXiv}, abs/2003.04618, 2020.
+
+\bibitem{mean-filter}
+S.~Rakshit, A.~Ghosh, and B.~Uma Shankar.
+\newblock Fast mean filtering technique (fmft).
+\newblock {\em Pattern Recognit.}, 40:890--897, 2007.
+
+\bibitem{lgsvl}
+Guodong Rong, Byung~Hyun Shin, Hadi Tabatabaee, Qiang Lu, Steve Lemke, Martins
+  Mozeiko, Eric Boise, Geehoon Uhm, Mark Gerow, Shalin Mehta, Eugene Agafonov,
+  Tae~Hyung Kim, Eric Sterner, Keunhae Ushiroda, Michael Reyes, Dmitry
+  Zelenkovsky, and Seonman Kim.
+\newblock Lgsvl simulator: A high fidelity simulator for autonomous driving.
+\newblock {\em 2020 IEEE 23rd International Conference on Intelligent
+  Transportation Systems (ITSC)}, pages 1--6, 2020.
+
+\bibitem{L0}
+Yujing Sun, Scott Schaefer, and Wenping Wang.
+\newblock Denoising point sets via l0 minimization.
+\newblock {\em Comput. Aided Geom. Des.}, 35-36:2--15, 2015.
+
+\bibitem{19}
+James Tu, Mengye Ren, Sivabalan Manivasagam, Ming Liang, Binh Yang, Richard Du,
+  Frank Cheng, and Raquel Urtasun.
+\newblock Physically realizable adversarial examples for lidar object
+  detection.
+\newblock {\em 2020 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 13713--13722, 2020.
+
+\bibitem{VG}
+Liying Wang, Yan Xu, and Yu~Li.
+\newblock A voxel-based 3d building detection algorithm for airborne lidar
+  point clouds.
+\newblock {\em Journal of the Indian Society of Remote Sensing}, 47:349--358,
+  2018.
+
+\bibitem{if-defense}
+Ziyi Wu, Yueqi Duan, He~Wang, Qingnan Fan, and Leonidas~J. Guibas.
+\newblock If-defense: 3d adversarial point cloud defense via implicit function
+  based restoration.
+\newblock {\em ArXiv}, abs/2010.05272, 2020.
+
+\bibitem{21}
+Danfei Xu, Dragomir Anguelov, and Ashesh Jain.
+\newblock Pointfusion: Deep sensor fusion for 3d bounding box estimation.
+\newblock {\em 2018 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition}, pages 244--253, 2018.
+
+\bibitem{22}
+Jiancheng Yang, Qiang Zhang, Rongyao Fang, Bingbing Ni, Jinxian Liu, and
+  Qi~Tian.
+\newblock Adversarial attack and defense on point sets.
+\newblock {\em ArXiv}, abs/1902.10899, 2019.
+
+\bibitem{23}
+Yue Zhao, Hong Zhu, Ruigang Liang, Qintao Shen, Shengzhi Zhang, and Kai Chen.
+\newblock Seeing isn't believing: Towards more robust adversarial attack
+  against real world object detectors.
+\newblock {\em Proceedings of the 2019 ACM SIGSAC Conference on Computer and
+  Communications Security}, 2019.
+
+\bibitem{24}
+Hang Zhou, Kejiang Chen, Weiming Zhang, Han Fang, Wenbo Zhou, and Nenghai Yu.
+\newblock Dup-net: Denoiser and upsampler network for 3d adversarial point
+  clouds defense.
+\newblock {\em 2019 IEEE/CVF International Conference on Computer Vision
+  (ICCV)}, pages 1961--1970, 2019.
+
+\bibitem{25}
+Yi~Zhu, Chenglin Miao, T.~Zheng, Foad Hajiaghajani, Lu~Su, and Chunming Qiao.
+\newblock Can we use arbitrary objects to attack lidar perception in autonomous
+  driving?
+\newblock {\em Proceedings of the 2021 ACM SIGSAC Conference on Computer and
+  Communications Security}, 2021.
+
+\end{thebibliography}

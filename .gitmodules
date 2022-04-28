@@ -1,0 +1,3 @@
+[submodule "lidar-msf"]
+	path = lidar-msf
+	url = https://github.com/ElaineYao/lidar-msf.git

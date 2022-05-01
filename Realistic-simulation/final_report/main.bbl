@@ -1,5 +1,16 @@
 \begin{thebibliography}{10}
 
+\bibitem{level4}
+The 6 levels of vehicle autonomy explained.
+\newblock
+  \url{https://www.synopsys.com/automotive/autonomous-driving-levels.html}.
+\newblock Accessed: 2022-03-05.
+
+\bibitem{autoware}
+Autoware.ai.
+\newblock \url{https://www.autoware.org/}.
+\newblock Accessed: 2022-03-05.
+
 \bibitem{apollo}
 Baidu apollo.
 \newblock \url{https://github.com/ApolloAuto/apollo}.
@@ -9,6 +20,16 @@ Baidu apollo.
 Companies are racing to make self-driving cars. but why?
 \newblock
   \url{https://www.washingtonpost.com/outlook/2022/02/04/self-driving-cars-why}.
+\newblock Accessed: 2022-03-05.
+
+\bibitem{McGill}
+Mcgill 3d shape benchmark.
+\newblock \url{http://www.cim.mcgill.ca/~shape/benchMark/}.
+\newblock Accessed: 2022-03-05.
+
+\bibitem{ray-tracing}
+Ray tracing.
+\newblock \url{https://computationalthinking.mit.edu/Fall20/lecture14/}.
 \newblock Accessed: 2022-03-05.
 
 \bibitem{17}
@@ -60,16 +81,33 @@ Shang-Tse Chen and Jason Martin.
   ).
 \newblock 2018.
 
-\bibitem{8}
-Gintare~Karolina Dziugaite, Zoubin Ghahramani, and Daniel~M. Roy.
-\newblock A study of the effect of jpg compression on adversarial images.
-\newblock {\em ArXiv}, abs/1608.00853, 2016.
+\bibitem{lidar}
+Ronald T.~H. Collis.
+\newblock Lidar.
+\newblock {\em Encyclopedic Dictionary of Archaeology}, 2021.
+
+\bibitem{adv3}
+Object Detectors and In~The.
+\newblock Camou: Learning a vehicle camouflage.
+\newblock 2018.
 
 \bibitem{9}
 Kevin Eykholt, I.~Evtimov, Earlence Fernandes, Bo~Li, Amir Rahmati, Florian
   Tram{\`e}r, Atul Prakash, Tadayoshi Kohno, and Dawn~Xiaodong Song.
 \newblock Physical adversarial examples for object detectors.
 \newblock {\em ArXiv}, abs/1807.07769, 2018.
+
+\bibitem{adv1}
+Kevin Eykholt, I.~Evtimov, Earlence Fernandes, Bo~Li, Amir Rahmati, Florian
+  Tram{\`e}r, Atul Prakash, Tadayoshi Kohno, and Dawn~Xiaodong Song.
+\newblock Physical adversarial examples for object detectors.
+\newblock {\em ArXiv}, abs/1807.07769, 2018.
+
+\bibitem{lidar-text}
+Davi Frossard and Raquel Urtasun.
+\newblock End-to-end learning of multi-sensor 3d tracking by detection.
+\newblock {\em 2018 IEEE International Conference on Robotics and Automation
+  (ICRA)}, pages 635--642, 2018.
 
 \bibitem{10}
 Davi Frossard and Raquel Urtasun.
@@ -88,39 +126,13 @@ Hongxing Gao, Wei Tao, Dongchao Wen, Junjie Liu, Tse-Wei Chen, Kinya Osa, and
 \bibitem{kitti}
 Andreas Geiger, Philip Lenz, Christoph Stiller, and Raquel Urtasun.
 \newblock Vision meets robotics: The kitti dataset.
-\newblock {\em The International Journal of Robotics Research}, 32:1231 --
-  1237, 2013.
+\newblock {\em International Journal of Robotics Research (IJRR)}, 2013.
 
-\bibitem{12}
-Chuan Guo, Mayank Rana, Moustapha Ciss{\'e}, and Laurens van~der Maaten.
-\newblock Countering adversarial images using input transformations.
-\newblock {\em ArXiv}, abs/1711.00117, 2018.
-
-\bibitem{point-cloud-survey}
-Yulan Guo, Hanyun Wang, Qingyong Hu, Hao Liu, Li~Liu, and Bennamoun.
-\newblock Deep learning for 3d point clouds: A survey.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  43:4338--4364, 2021.
-
-\bibitem{median-filter}
-Thomas~S. Huang, G~Yang, and G.~Tang.
-\newblock A fast two-dimensional median filtering algorithm.
-\newblock {\em IEEE Transactions on Acoustics, Speech, and Signal Processing},
-  27:13--18, 1979.
-
-\bibitem{13}
-Connie Khor~Li Kou, Hwee~Kuan Lee, Ee-Chien Chang, and Teck~Khim Ng.
-\newblock Enhancing transformation-based defenses against adversarial attacks
-  with a distribution classifier.
-\newblock In {\em ICLR}, 2020.
-
-\bibitem{14}
-Bin Liang, Hongcheng Li, Miaoqiang Su, Xirong Li, Wenchang Shi, and Xiaofeng
-  Wang.
-\newblock Detecting adversarial image examples in deep neural networks with
-  adaptive noise reduction.
-\newblock {\em IEEE Transactions on Dependable and Secure Computing},
-  18:72--85, 2021.
+\bibitem{nmr}
+Hiroharu Kato, Y.~Ushiku, and Tatsuya Harada.
+\newblock Neural 3d mesh renderer.
+\newblock {\em 2018 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition}, pages 3907--3916, 2018.
 
 \bibitem{15}
 Ming Liang, Binh Yang, Yun Chen, Rui Hu, and Raquel Urtasun.
@@ -146,11 +158,6 @@ Songyou Peng, Michael Niemeyer, Lars~M. Mescheder, Marc Pollefeys, and Andreas
 \newblock Convolutional occupancy networks.
 \newblock {\em ArXiv}, abs/2003.04618, 2020.
 
-\bibitem{mean-filter}
-S.~Rakshit, A.~Ghosh, and B.~Uma Shankar.
-\newblock Fast mean filtering technique (fmft).
-\newblock {\em Pattern Recognit.}, 40:890--897, 2007.
-
 \bibitem{lgsvl}
 Guodong Rong, Byung~Hyun Shin, Hadi Tabatabaee, Qiang Lu, Steve Lemke, Martins
   Mozeiko, Eric Boise, Geehoon Uhm, Mark Gerow, Shalin Mehta, Eugene Agafonov,
@@ -159,6 +166,18 @@ Guodong Rong, Byung~Hyun Shin, Hadi Tabatabaee, Qiang Lu, Steve Lemke, Martins
 \newblock Lgsvl simulator: A high fidelity simulator for autonomous driving.
 \newblock {\em 2020 IEEE 23rd International Conference on Intelligent
   Transportation Systems (ITSC)}, pages 1--6, 2020.
+
+\bibitem{black-lidar}
+Jiachen Sun, Yulong Cao, Qi~Alfred Chen, and Z.~Morley Mao.
+\newblock Towards robust lidar-based perception in autonomous driving: General
+  black-box adversarial sensor attack and countermeasures.
+\newblock {\em ArXiv}, abs/2006.16974, 2020.
+
+\bibitem{lidar1}
+Jiachen Sun, Yulong Cao, Qi~Alfred Chen, and Z.~Morley Mao.
+\newblock Towards robust lidar-based perception in autonomous driving: General
+  black-box adversarial sensor attack and countermeasures.
+\newblock {\em ArXiv}, abs/2006.16974, 2020.
 
 \bibitem{L0}
 Yujing Sun, Scott Schaefer, and Wenping Wang.
@@ -197,6 +216,12 @@ Jiancheng Yang, Qiang Zhang, Rongyao Fang, Bingbing Ni, Jinxian Liu, and
   Qi~Tian.
 \newblock Adversarial attack and defense on point sets.
 \newblock {\em ArXiv}, abs/1902.10899, 2019.
+
+\bibitem{adv2}
+Yue Zhao, Hong Zhu, Ruigang Liang, Qintao Shen, Shengzhi Zhang, and Kai Chen.
+\newblock Seeing isn't believing: Practical adversarial attack against object
+  detectors.
+\newblock {\em arXiv: Computer Vision and Pattern Recognition}, 2018.
 
 \bibitem{23}
 Yue Zhao, Hong Zhu, Ruigang Liang, Qintao Shen, Shengzhi Zhang, and Kai Chen.

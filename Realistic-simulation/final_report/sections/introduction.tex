@@ -2,14 +2,18 @@
 % It's not about the feasibility of the attack, but about, is the simulation for 3d physical adversarial attacks realistic enough?
 % Here I can also add some anaysis in physical adversarial simulation from other papers(cite, search for citing figures from other source)
 
-Autonomous Vehicles(AVs) are playing an important role in
-future transportation. Large companies such as Google,
-Uber\cite{1} are racing to develop AVs and some of them have already been deployed on the road. 
-AVs rely on different sensors\cite{17} such as cameras, LiDARs, Radars, IMU(Inertial
+Autonomous Vehicles(AVs) can sense the surrounding environment and move safely with little human input.
+They are playing an important role in future transportation. Large companies such as Google,
+Uber\cite{1} are racing to develop AVs and some high level , such as level 4 self-dirving cars have already been deployed on the road. 
+Level 4 is considered to be fully autonomous driving. It can handle complex urban driving situations without driver intervention. 
+A fundamental part in autonomous driving system is perception.
+It uses sensors\cite{17} such as cameras, LiDARs, Radars, IMU(Inertial
 Measurement Unit) and GPS to know the physical environment and react accordingly. Among them, perception sensors
 including cameras and LiDARs provide the obstacle and traffic sign information to AVs to avoid wrong decisions like
-collision and violating traffic rules, etc. Therefore, multiple
-prior works have been studying the security of these perception sensors.
+collision and violating traffic rules, etc. 
+Failures in perception can pose a threat to the safety of self-driving. 
+In 2020, a tesla car in autopilot mode collided with an overturned truck as it failed to detect it.
+Therefore, multiple prior works have been studying the security of these perception sensors.
 
 Prior work has shown that AVs are vulnerable to attacks
 towards camera \cite{7, 9, 23} or LiDAR sensors \cite{4, 6, 19, 25}.
@@ -18,57 +22,125 @@ stop sign) or add well-designed adversarial patches\cite{9} to
 mislead the cameras. They can also inject laser\cite{6} to spoof
 the LiDAR sensors.
 
-To defend the aforementioned attacks, researchers designed
-transformation for perceived inputs from camera\cite{13} and LiDAR\cite{22} sensors individually. Multiple Sensor Fusion(MSF)
-algorithms are also proposed to integrate inputs from cameras and LiDARs to produce correct output based on the
-unattacked sensors.
+All of these studies, however, are limited to attacks with synthesized background, 
+i.e., integrating the adversarial object with the road background through rendering functions instead of realistic simulation\cite{23, 25, msf-adv, black-lidar, 19}.
+In order to simulate the scenario where a 3D vehicle is put in the road, 
+these work will synthesize the attacked-influenced sensor perception, for example, the point clouds by LiDAR and images by camera with respective 3D rendering functions.
+These rendering techniques provided by computer graphics can simulate the real sensor functions
+ but still lack comprehensive consideration in sensing the environment due to the simplicity of its model.
+By contrast, sensor perception in physical world can integrate more information such as light condition, realistic texture of adversarial objects, reasonable positions.
+Although most recent works in adversarial attacks will evaluate their methods in physical world to show the effectiveness and feasibility,
+they use the synthesized method to generate the malicious objects for faster speed.
+The assumption that the synthesized attack-influenced background is realistic should be believed to hold in general\cite{msf-adv} and thus examining the effectiveness of this method is an urgent call.
 
-However, an important and widely accepted assumption in
-MSF is there is at least one clean sensor\cite{msf-adv}.
+This project presents a study on evaluation of the reality of synthesized backgrounds in AD perception systems today.
+We test the above rendering-based simulation assumption by evaluating the neural network performance on these integrated sensor perception outputs used in the state-of-art adversarial attack work.
+This allows us to gain a solid understanding of how much authenticity guarantee the use of synthesized background can provide as a realistic simulation way to generate effective adversarial objects.
+Specifically, we consider physical 3D objects as the attack vectors for real-life feasibility and examine the performance of object detection neural network models deployed in real AV systems on the synthesized scenes.
 
-This assumption is approved to fail at specific situations
-by Cao et al. \cite{msf-adv}. They observed that different shapes of a 3D
-object can spoof both LiDARs and cameras with the change
-of point position and pixel valuesc\cite{msf-adv}. Also, the generated 3D
-objects are stealthier and more robust than previous work. As
-no safe sensor exists under this attack, the MSF algorithm doesn’t
-have reliable sensors to trust. Most recovering-based defenses only work in one kind of sensor attack and thus fail to
-have good performance under this scenario. Therefore, 
-in the experiments, the car didn’t detect the adversarial obstacles and crashed into it.
+Even though previous works have designed perception rendering functions for camera and LiDAR, we find that simply feeding them with different objects and backgrounds won't meet our requirements.
+First, we need to identify the factors in the synthesized scene that might influence the detection accuracy of the neural network.
+For example, the object detection model may find it difficult to detect an object which is far from away the sensor.
+Also, the color of the obstacle is similar to surrounding environment so that it's hidden from the neural network.
+Second, physical consistency between the obstacle and the driving background should be maximum guaranteed. 
+No matter where we put the obstacle, it should stand on the road instead of floating in the air or hitting the ground.
+It should also follow the shadow caused by sunlight.
+Third, to quantify the authenticity of the synthesized scene, we need to come up with domain-specific metrics.
+The previous works use different metrics to measure whether their adversarial obstacle achieves the goal and lack unified standard,
+which makes it difficult to provide fair and reasonable metrics.
+Fourth, we need to develop an automated pipeline for generating different synthesized scene, evaluating the neural network performance in the scene without attack as well as with attack.
+Manually adjusting the parameters can take a long time and it's hard to do large scale analysis.
 
-We observe that defense against attacks to both cameras
-and LiDARs is urgently needed to secure AVs. Even though
-some prior works\cite{if-defense, 22, 24} have studied 3D objects adversarial defenses. They are targeting pure neural networks
-instead of a real AV system. The object detection in a real AV
-system consisting of input pre-processing(e.g., format transformation, feature generation, etc.), neural network model,
-post-processing(e.g., clustering, multiple sensor fusion, etc.).
-Also, static and general 3D objects are considered in prior
-works rather than moving and traffic-related objects. Thus,
-their methods can’t be directly applied to the attack we’re
-targeting.
+Towards this end, we design an automatic and comprehensive synthesized scene test suites, which addresses the challenges above and thus provides evaluation for the authenticity of these rendering methods.
+Through preliminary experiments, we choose different driving backgrounds, 3D obstacle properties(including the color, shape and texture) and the interaction between the background and the obstacle, 
+e.g., the relative position, as the impact factors and serve them as the parameters to adjust.
+The attackers assumed in the previous work can just place an object on the road as simulated in the synthesized scene.
+To systematically generate realistic scene, we adopt camera imaging theory to adjust the height of the object so that it's standing on the road. 
+Light condition is considered to comply with the driving background. 
+Also, we start with normal obstacle which can be obtained from life easily, e.g., a common chair.
+Under these test settings, we address design challenge 3 by considering the correctness of bounding box of detected object, object class and its corresponding confidence score.
+We extract these by parsing the output of object detection neural network. 
+Also, we use these as building blocks to compute the overall scores for authenticity of the scene.
+In the end, we developed automated pipelines for selecting different factors and evaluating the detection performance under benign and malicious cases.
 
-Our motivation comes from the previous defenses that remove perturbations from the corrupted inputs\cite{8, 14},
- or take the majority vote
-from randomly transformed image\cite{12} against2D images and 3D objects adversarial attacks. 
-The main idea behind these defenses is to do transforms on
-the perception input and remove the malicious characteristics
-generated by the attacker. 
+We evaluate the scene synthesizing method in MSF-ADV\cite{msf-adv} and choose the image object detection neural network model in Autoware.AI\cite{autoware}, which is representative for current AD systems.
+We also choose the attack in MSF-ADV\cite{msf-adv} to generate adversarial 3D objects which can both fool the camera and LiDAR object detection models.
+We select 3 shapes of chairs from McGill 3D Shape Benchmark\cite{McGill} and evaluate each on 5 real-world driving scenarios from the KITTI dataset\cite{kitti}.
+60 different scenes are synthesized and evaluated. 
+Our results show that the benign obstacle in the synthesized scene fail to be detected in all the test settings.
+We also find that for the attack strategy generating the adversarial object, if the benign object fails to be detected in the first place, 
+it's also hard to generate effective adversarial obstacles. 
+What's more, in this situation, it's hard to provide guarantee that the generated adversarial object is effective in physical world.
 
-Therefore, in this work, we aim to smooth the noisy surface of obstacles with this latest 3D point cloud reconstruction network - IF-Defense\cite{if-defense}.
-IF-Defense\cite{if-defense} aims to recover the surface of 3D objects with the awareness of geometry property and uniform distribution of the points.
-However, it's only trained and tested in the dataset containing single 3D objects.
-Its performance in working in real AV perception is unknown.
-Moreover, directly applying IF-Defense\cite{if-defense} may result in unnecessary computational overhead as 
-not all the 3D perception needs recovery. 
-For example, in a wide open area, the majority of the perception is road and only a small part is the obstacles.
+In summary, this work makes the following contributions:
+\begin{enumerate}
+	\item We study the authenticity of synthesized scenes in AD perception systems. 
+	We successfully design a comprehensive test suite aiming at evaluating the whether the method to integrate an 3D object in the road background is realistic or not.
+	\item We adopt empirical approaches that address four main design challenges: 
+	various impact factors, physical environment consistency, domain-specific metrics and automated pipeline.
+	\item We evaluate the synthesized scene with our test suite in representative open-source industry-grade AD system object detection models with real-world driving scenarios.
+	We also choose state-of-art adversarial 3D physical attack for evaluation in malicious cases.
+	Our results show that most synthesized scenes are not realistic enough so that the object detection fail to detect the obstacles in it.
+	Such phenomenon can reduce the effectiveness guarantee of generated 3D adversarial attacks in physical world.
+\end{enumerate}
 
-Based on this, we further propose a lightweight segmentation algorithm, aiming to provide a rough location for the areas to be recovered.
-The intuition for this algorithm is, we observe that due to laser imaging in the LiDAR system, a blank shadow is formed after the obstacle.
-Usually, the number of points in the obstacle area is much larger than that in road areas.
-And the number of points in shadow areas is much smaller.
-We then calculate the Manhattan distance between obstacle areas and shadow areas to relate the obstacle with the corresponding shadow.
-A new set of point clouds containing the obstacle and its shadow is treated as the object to be recovered and sent to IF-Defense\cite{if-defense}.
-Through this, we aim to recover the noisy surface of 3D objects in the point cloud form.
+While rendering the obstacle into the road background is a general way of generating adversarial 3D obstacles, 
+prior works lack the realistic validation of the synthesized scene. 
+In this project, we try to evaluate it by measuring the neural networks performance under different settings.
+We hope that our findings can inspire more future related research to validate their rendering process in AD perception when designing the 3D adversarial obstacles.
+
+
+%To defend the aforementioned attacks, researchers designed
+%transformation for perceived inputs from camera\cite{13} and LiDAR\cite{22} sensors individually. Multiple Sensor Fusion(MSF)
+%algorithms are also proposed to integrate inputs from cameras and LiDARs to produce correct output based on the
+%unattacked sensors.
+%
+%However, an important and widely accepted assumption in
+%MSF is there is at least one clean sensor\cite{msf-adv}.
+%
+%This assumption is approved to fail at specific situations
+%by Cao et al. \cite{msf-adv}. They observed that different shapes of a 3D
+%object can spoof both LiDARs and cameras with the change
+%of point position and pixel valuesc\cite{msf-adv}. Also, the generated 3D
+%objects are stealthier and more robust than previous work. As
+%no safe sensor exists under this attack, the MSF algorithm doesn’t
+%have reliable sensors to trust. Most recovering-based defenses only work in one kind of sensor attack and thus fail to
+%have good performance under this scenario. Therefore, 
+%in the experiments, the car didn’t detect the adversarial obstacles and crashed into it.
+%
+%We observe that defense against attacks to both cameras
+%and LiDARs is urgently needed to secure AVs. Even though
+%some prior works\cite{if-defense, 22, 24} have studied 3D objects adversarial defenses. They are targeting pure neural networks
+%instead of a real AV system. The object detection in a real AV
+%system consisting of input pre-processing(e.g., format transformation, feature generation, etc.), neural network model,
+%post-processing(e.g., clustering, multiple sensor fusion, etc.).
+%Also, static and general 3D objects are considered in prior
+%works rather than moving and traffic-related objects. Thus,
+%their methods can’t be directly applied to the attack we’re
+%targeting.
+%
+%Our motivation comes from the previous defenses that remove perturbations from the corrupted inputs\cite{8, 14},
+% or take the majority vote
+%from randomly transformed image\cite{12} against2D images and 3D objects adversarial attacks. 
+%The main idea behind these defenses is to do transforms on
+%the perception input and remove the malicious characteristics
+%generated by the attacker. 
+%
+%Therefore, in this work, we aim to smooth the noisy surface of obstacles with this latest 3D point cloud reconstruction network - IF-Defense\cite{if-defense}.
+%IF-Defense\cite{if-defense} aims to recover the surface of 3D objects with the awareness of geometry property and uniform distribution of the points.
+%However, it's only trained and tested in the dataset containing single 3D objects.
+%Its performance in working in real AV perception is unknown.
+%Moreover, directly applying IF-Defense\cite{if-defense} may result in unnecessary computational overhead as 
+%not all the 3D perception needs recovery. 
+%For example, in a wide open area, the majority of the perception is road and only a small part is the obstacles.
+%
+%Based on this, we further propose a lightweight segmentation algorithm, aiming to provide a rough location for the areas to be recovered.
+%The intuition for this algorithm is, we observe that due to laser imaging in the LiDAR system, a blank shadow is formed after the obstacle.
+%Usually, the number of points in the obstacle area is much larger than that in road areas.
+%And the number of points in shadow areas is much smaller.
+%We then calculate the Manhattan distance between obstacle areas and shadow areas to relate the obstacle with the corresponding shadow.
+%A new set of point clouds containing the obstacle and its shadow is treated as the object to be recovered and sent to IF-Defense\cite{if-defense}.
+%Through this, we aim to recover the noisy surface of 3D objects in the point cloud form.
 
 % In the context of attacks towards cameras and LiDARs in
 % real AVs, similar malicious features also exist. These features
@@ -79,52 +151,52 @@ Through this, we aim to recover the noisy surface of 3D objects in the point clo
 % objects. Applying filters can make the inputs more smooth
 % and decrease the noise introduced by the attacker.
 
-One advantage that our work has is, we are not aimed
-to recover the direct output for both LiDAR and camera object detection models.
-We only need to provide at least one or a few correct outputs and let the
-MSF fuse the two results from LiDAR and camera model to correct detection results. 
-Even though we can’t guarantee to recover the outputs, at least some benign inputs
-are sent to MSF and there are fewer possibilities in the wrong detection.
-
-In this work, we aim to answer the following research
-questions:
-
-1. Is it possible to apply transforms on noised 3D objects
-to recover the detection output of the AV system?
-
-2. Will the transforms degrade the accuracy when it’s applied to clean inputs?
-
-3. Can the adversaries alter their attack accordingly to avoid
-this model-specific defense?
-
-\subsection{Threat Model}
-The attacker is assumed to know the details of the MSF algorithm
-in the victim system. Most adversarial attacks\cite{4, 7, 9, 19, 23}
-on camera or LiDAR sensors in the AVs are white-box attacks
-and this assumption holds for many prior works. The adversaries are also able to profile the road environment they’re
-targeting, and generate obstacles using 3D printing.
-
-\subsection{Challenges}
-\textbf{C1: How to find useful transforms for both camera and
-LiDAR perception?}
-Prior works have studied the transformations in 3D objects
-for camera or LiDAR perception [20, 22, 24]. However, due
-to the different perception theories in camera and LiDAR, it
-might be hard to find a common transform for both of them.
-And this is needed in the attacks towards both sensors.
-
-\textbf{C2: How to avoid the deterioration of performance on clean objects?}
-Applying random transform on all inputs will decrease the
-accuracy rate on clean inputs [12], as it may remove some
-important properties in real-life objects. Therefore, the transformation that we’re designing should try to recover the corrupted
-inputs while remain the important properties in clean inputs.
-
-\textbf{C3: How to avoid the attacker from altering the attacks
-with the knowledge of the transform?}
-Transformation is usually effective to a certain series of
-characteristics in the inputs. If a white-box attacker knows the
-transforms applied in the system, he may alter the optimization objectives to prevent the transform from removing the
-adversarial parts. Is there a way to decrease the success rate
-that the attacker can design a similar attack?
-
-
+%One advantage that our work has is, we are not aimed
+%to recover the direct output for both LiDAR and camera object detection models.
+%We only need to provide at least one or a few correct outputs and let the
+%MSF fuse the two results from LiDAR and camera model to correct detection results. 
+%Even though we can’t guarantee to recover the outputs, at least some benign inputs
+%are sent to MSF and there are fewer possibilities in the wrong detection.
+%
+%In this work, we aim to answer the following research
+%questions:
+%
+%1. Is it possible to apply transforms on noised 3D objects
+%to recover the detection output of the AV system?
+%
+%2. Will the transforms degrade the accuracy when it’s applied to clean inputs?
+%
+%3. Can the adversaries alter their attack accordingly to avoid
+%this model-specific defense?
+%
+%\subsection{Threat Model}
+%The attacker is assumed to know the details of the MSF algorithm
+%in the victim system. Most adversarial attacks\cite{4, 7, 9, 19, 23}
+%on camera or LiDAR sensors in the AVs are white-box attacks
+%and this assumption holds for many prior works. The adversaries are also able to profile the road environment they’re
+%targeting, and generate obstacles using 3D printing.
+%
+%\subsection{Challenges}
+%\textbf{C1: How to find useful transforms for both camera and
+%LiDAR perception?}
+%Prior works have studied the transformations in 3D objects
+%for camera or LiDAR perception [20, 22, 24]. However, due
+%to the different perception theories in camera and LiDAR, it
+%might be hard to find a common transform for both of them.
+%And this is needed in the attacks towards both sensors.
+%
+%\textbf{C2: How to avoid the deterioration of performance on clean objects?}
+%Applying random transform on all inputs will decrease the
+%accuracy rate on clean inputs [12], as it may remove some
+%important properties in real-life objects. Therefore, the transformation that we’re designing should try to recover the corrupted
+%inputs while remain the important properties in clean inputs.
+%
+%\textbf{C3: How to avoid the attacker from altering the attacks
+%with the knowledge of the transform?}
+%Transformation is usually effective to a certain series of
+%characteristics in the inputs. If a white-box attacker knows the
+%transforms applied in the system, he may alter the optimization objectives to prevent the transform from removing the
+%adversarial parts. Is there a way to decrease the success rate
+%that the attacker can design a similar attack?
+%
+%

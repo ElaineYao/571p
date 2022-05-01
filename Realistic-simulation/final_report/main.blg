@@ -1,11 +1,19 @@
-This is BibTeX, Version 0.99d (TeX Live 2021)
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: refences.bib
+Repeated entry---line 318 of file refences.bib
+ : @article{kitti
+ :               ,
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in 1
 Warning--to sort, need author or key in 17
+Warning--to sort, need author or key in autoware
+Warning--to sort, need author or key in McGill
+Warning--to sort, need author or key in level4
 Warning--to sort, need author or key in apollo
+Warning--to sort, need author or key in ray-tracing
 Warning--to sort, need author or key in implicit
 Warning--empty author in 17
 Warning--empty booktitle in 17
@@ -14,45 +22,46 @@ Warning--empty author in implicit
 Warning--empty booktitle in implicit
 Warning--empty booktitle in msf-adv
 Warning--empty booktitle in 7
-You've used 35 entries,
+Warning--empty booktitle in adv3
+You've used 40 entries,
             2118 wiz_defined-function locations,
-            666 strings with 10788 characters,
-and the built_in function-call counts, 13985 in all, are:
-= -- 1261
-> -- 977
-< -- 9
-+ -- 390
-- -- 352
+            659 strings with 10472 characters,
+and the built_in function-call counts, 14864 in all, are:
+= -- 1351
+> -- 993
+< -- 11
++ -- 398
+- -- 356
 * -- 1070
-:= -- 2372
-add.period$ -- 102
-call.type$ -- 35
-change.case$ -- 281
+:= -- 2479
+add.period$ -- 117
+call.type$ -- 40
+change.case$ -- 298
 chr.to.int$ -- 0
-cite$ -- 46
-duplicate$ -- 461
-empty$ -- 875
-format.name$ -- 352
-if$ -- 2852
+cite$ -- 56
+duplicate$ -- 515
+empty$ -- 968
+format.name$ -- 356
+if$ -- 3073
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 32
-newline$ -- 175
-num.names$ -- 62
-pop$ -- 300
+int.to.str$ -- 40
+missing$ -- 33
+newline$ -- 200
+num.names$ -- 64
+pop$ -- 354
 preamble$ -- 1
-purify$ -- 246
+purify$ -- 258
 quote$ -- 0
-skip$ -- 351
+skip$ -- 408
 stack$ -- 0
-substring$ -- 585
-swap$ -- 116
-text.length$ -- 9
+substring$ -- 562
+swap$ -- 140
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 140
-warning$ -- 11
-while$ -- 86
-width$ -- 37
-write$ -- 364
-(There were 11 warnings)
+type$ -- 160
+warning$ -- 16
+while$ -- 87
+width$ -- 42
+write$ -- 407
+(There was 1 error message)

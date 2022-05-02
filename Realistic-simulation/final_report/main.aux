@@ -52,49 +52,31 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Adversarial 3D Object Attacks}{3}{subsection.2.3}\protected@file@percent }
 \citation{msf-adv}
 \citation{msf-adv}
-\citation{if-defense}
-\citation{if-defense}
-\citation{VG}
-\citation{L0}
-\citation{mls}
-\citation{dupnet}
-\citation{if-defense}
-\citation{if-defense}
-\citation{if-defense}
-\citation{if-defense}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Perception module in AV systems\relax }}{4}{figure.caption.1}\protected@file@percent }
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:module}{{1}{4}{Perception module in AV systems\relax }{figure.caption.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Synthesized scene through camera rendering\relax }}{4}{figure.caption.2}\protected@file@percent }
-\newlabel{fig:synthe}{{2}{4}{Synthesized scene through camera rendering\relax }{figure.caption.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Approach}{4}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Overview}{4}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Characteristics of adversarial 3D objects}{4}{subsection.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Pipeline for generating adversarial 3D object attacks for both Lidar and Camera\relax }}{4}{figure.caption.3}\protected@file@percent }
-\newlabel{fig:attack-pipe}{{3}{4}{Pipeline for generating adversarial 3D object attacks for both Lidar and Camera\relax }{figure.caption.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Benign chair and the malicious version\relax }}{4}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:noisy}{{4}{4}{Benign chair and the malicious version\relax }{figure.caption.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Recovering methods}{4}{subsection.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Lightweight segmentation algorithm}{4}{subsection.3.4}\protected@file@percent }
 \citation{msf-adv}
 \citation{msf-adv}
-\citation{if-defense}
-\citation{implicit}
-\citation{if-defense}
-\citation{ONet}
-\citation{ConvONet}
-\citation{if-defense}
-\citation{shapenet}
-\citation{kitti}
-\citation{if-defense}
+\citation{adv1,adv2}
+\citation{apollo}
+\citation{autoware}
+\citation{msf-adv}
+\citation{25}
+\citation{msf-adv,lidar1}
+\citation{25}
+\citation{msf-adv}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Attack Model and Design Challenges}{4}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Attack Goal and Threat Model}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Design Challenges}{4}{subsection.3.2}\protected@file@percent }
+\citation{msf-adv}
+\citation{msf-adv}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Approach}{5}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overview}{5}{subsection.4.1}\protected@file@percent }
+\citation{autoware}
+\citation{msf-adv}
 \citation{apollo}
 \citation{lgsvl}
 \citation{msf-adv}
 \citation{if-defense}
-\newlabel{eq:Manhattan}{{1}{5}{Lightweight segmentation algorithm}{equation.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Segmentation-based IF-defense}{5}{subsection.3.5}\protected@file@percent }
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Object segmentation algorithm\relax }}{5}{algorithm.1}\protected@file@percent }
-\newlabel{alg:segment}{{1}{5}{Object segmentation algorithm\relax }{algorithm.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experiments}{6}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Experiment setup}{6}{subsection.5.1}\protected@file@percent }
 \citation{7,9,23}
 \citation{msf-adv}
 \citation{4,6,19,25}
@@ -106,6 +88,24 @@
 \citation{if-defense}
 \citation{24}
 \citation{10,15,16,21}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of the automated test suite pipeline for benign synthesized scenes.\relax }}{7}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:test-pipe}{{1}{7}{Overview of the automated test suite pipeline for benign synthesized scenes.\relax }{figure.caption.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Detection rate.\relax }}{7}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:detection}{{2}{7}{Detection rate.\relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Confidence rate.\relax }}{7}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:conf}{{3}{7}{Confidence rate.\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Algorithm for calculating confidence scores and detected objects.\relax }}{7}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:algo}{{4}{7}{Algorithm for calculating confidence scores and detected objects.\relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Intersection over Union(IoU)\relax }}{7}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:iou}{{5}{7}{Intersection over Union(IoU)\relax }{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Overview of the automated test suite for adversarial synthesized scenes.\relax }}{7}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:test-att}{{6}{7}{Overview of the automated test suite for adversarial synthesized scenes.\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussions}{7}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Limitations of our Experiments}{7}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Future work}{7}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Challenges}{7}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Related Work}{7}{section.7}\protected@file@percent }
 \bibstyle{plain}
 \bibdata{refences}
 \bibcite{level4}{1}
@@ -118,15 +118,6 @@
 \bibcite{implicit}{8}
 \bibcite{4}{9}
 \bibcite{mls}{10}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces LiDAR perception. Modified from Figure 10 in \cite  {msf-adv}\relax }}{6}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:lidar}{{5}{6}{LiDAR perception. Modified from Figure 10 in \cite {msf-adv}\relax }{figure.caption.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{6}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Experiment setup}{6}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussions}{6}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Limitations of our Experiments}{6}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Future work}{6}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Challenges}{6}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Related Work}{6}{section.6}\protected@file@percent }
 \bibcite{msf-adv}{11}
 \bibcite{6}{12}
 \bibcite{shapenet}{13}
@@ -143,8 +134,6 @@
 \bibcite{15}{24}
 \bibcite{16}{25}
 \bibcite{ONet}{26}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Segmentation algorithm\relax }}{7}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:seg}{{6}{7}{Segmentation algorithm\relax }{figure.caption.6}{}}
 \bibcite{ConvONet}{27}
 \bibcite{lgsvl}{28}
 \bibcite{black-lidar}{29}

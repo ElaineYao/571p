@@ -3,16 +3,15 @@
 \BOOKMARK [2][-]{subsection.2.1}{AV Perception System}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Synthesized Scene}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Adversarial 3D Object Attacks}{section.2}% 5
-\BOOKMARK [1][-]{section.3}{Approach}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{Overview}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.2}{Characteristics of adversarial 3D objects}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.3}{Recovering methods}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.4}{Lightweight segmentation algorithm}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.5}{Segmentation-based IF-defense}{section.3}% 11
-\BOOKMARK [1][-]{section.4}{Experiments}{}% 12
-\BOOKMARK [2][-]{subsection.4.1}{Experiment setup}{section.4}% 13
-\BOOKMARK [1][-]{section.5}{Discussions}{}% 14
-\BOOKMARK [2][-]{subsection.5.1}{Limitations of our Experiments}{section.5}% 15
-\BOOKMARK [2][-]{subsection.5.2}{Future work}{section.5}% 16
-\BOOKMARK [2][-]{subsection.5.3}{Challenges}{section.5}% 17
-\BOOKMARK [1][-]{section.6}{Related Work}{}% 18
+\BOOKMARK [1][-]{section.3}{Attack Model and Design Challenges}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Attack Goal and Threat Model}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Design Challenges}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Approach}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Overview}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{Experiments}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Experiment setup}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Discussions}{}% 13
+\BOOKMARK [2][-]{subsection.6.1}{Limitations of our Experiments}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.2}{Future work}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.3}{Challenges}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Related Work}{}% 17

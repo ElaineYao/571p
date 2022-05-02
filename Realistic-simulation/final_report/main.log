@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.10.27)  30 APR 2022 21:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.10.27)  1 MAY 2022 22:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -772,6 +772,9 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \CommentStream=\write4
 
 Excluding comment 'comment')
+(/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count305
@@ -780,35 +783,35 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 75.
 LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line
- 74.
+ 75.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Info: Redefining \microtypecontext on input line 74.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Info: Redefining \microtypecontext on input line 75.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 74.
+LaTeX Info: Redefining \showhyphens on input line 75.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: Adjustment of interword spacing enabled.
 Package microtype Info: Using default spacing set `basictext'.
@@ -847,7 +850,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring ON on input line 74.
+Package hyperref Info: Link coloring ON on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -860,9 +863,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count312
 )
-LaTeX Info: Redefining \ref on input line 74.
-LaTeX Info: Redefining \pageref on input line 74.
-LaTeX Info: Redefining \nameref on input line 74.
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -877,10 +880,21 @@ Package caption Info: End \AtBeginDocument code.
 Package todonotes Warning: The length marginparwidth is less than 2cm and will 
 most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
-loading the todonotes package. on input line 74.
+loading the todonotes package. on input line 75.
+
+LaTeX Info: Redefining \celsius on input line 75.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 75.
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 75.
+Package gensymb Info: Using \upOmega for \ohm on input line 75.
+
+Package gensymb Warning: Not defining \micro.
 
 LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line
- 93.
+ 94.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
@@ -889,25 +903,25 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ptmcm on input line
- 93.
+ 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+psycm on input line
- 93.
+ 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 94.
 
-Underfull \hbox (badness 1735) in paragraph at lines 104--105
+Underfull \hbox (badness 1735) in paragraph at lines 105--106
 \T1/ptm/b/n/10 For Au-tonomous Ve-hi-cles(AVs), sen-sor per-cep-tion is
  []
 
@@ -915,61 +929,70 @@ Underfull \hbox (badness 1735) in paragraph at lines 104--105
 ap}
 
 
-] [2]) (./sections/background.tex [3]
-<figure/structure.png, id=200, 1267.73625pt x 416.55624pt>
-File: figure/structure.png Graphic file (type png)
-<use figure/structure.png>
-Package pdftex.def Info: figure/structure.png  used on input line 99.
-(pdftex.def)             Requested size: 192.81703pt x 63.35152pt.
-<figure/synthesized.png, id=202, 604.50844pt x 168.63pt>
-File: figure/synthesized.png Graphic file (type png)
-<use figure/synthesized.png>
-Package pdftex.def Info: figure/synthesized.png  used on input line 106.
-(pdftex.def)             Requested size: 192.81703pt x 53.78516pt.
-<figure/attack-pipeline.png, id=203, 676.77844pt x 278.54062pt>
-File: figure/attack-pipeline.png Graphic file (type png)
-<use figure/attack-pipeline.png>
-Package pdftex.def Info: figure/attack-pipeline.png  used on input line 113.
-(pdftex.def)             Requested size: 192.81703pt x 79.35515pt.
-) (./sections/approach.tex
-Underfull \hbox (badness 1939) in paragraph at lines 29--31
-[]\T1/ptm/m/n/10 (+20) Therefore, in this de-fense, we first de-sign our own
- []
+] [2]) (./sections/background.tex
 
-<figure/benign&ma.png, id=214, 707.64375pt x 296.10625pt>
-File: figure/benign&ma.png Graphic file (type png)
-<use figure/benign&ma.png>
-Package pdftex.def Info: figure/benign&ma.png  used on input line 41.
-(pdftex.def)             Requested size: 241.02039pt x 100.851pt.
-[4 <./figure/structure.png> <./figure/synthesized.png (PNG copy)> <./figure/att
-ack-pipeline.png (PNG copy)> <./figure/benign&ma.png>]
+LaTeX Warning: Reference `fig:module' on page 3 undefined on input line 17.
+
+
+LaTeX Warning: Reference `fig:synthe' on page 3 undefined on input line 36.
+
+
+LaTeX Warning: Reference `fig:attack-pipe' on page 3 undefined on input line 59
+.
+
+[3]) (./sections/attackmodel.tex
+
+LaTeX Warning: Reference `fig:noisy' on page 4 undefined on input line 29.
+
+[4]) (./sections/approach.tex [5]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 86.
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 107.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
+3.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figure/lidar.png, id=238, 332.24126pt x 291.0875pt>
-File: figure/lidar.png Graphic file (type png)
-<use figure/lidar.png>
-Package pdftex.def Info: figure/lidar.png  used on input line 148.
-(pdftex.def)             Requested size: 120.5102pt x 105.58202pt.
-<figure/segmentation.png, id=241, 1205.50375pt x 307.1475pt>
-File: figure/segmentation.png Graphic file (type png)
-<use figure/segmentation.png>
-Package pdftex.def Info: figure/segmentation.png  used on input line 155.
-(pdftex.def)             Requested size: 505.89pt x 128.89326pt.
-) (./sections/experiments.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5])
-(./sections/discussion.tex) (./sections/related-work.tex) (./main.bbl
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+<figure/test-pipeline.png, id=222, 954.56625pt x 438.13687pt>
+File: figure/test-pipeline.png Graphic file (type png)
+<use figure/test-pipeline.png>
+Package pdftex.def Info: figure/test-pipeline.png  used on input line 110.
+(pdftex.def)             Requested size: 241.02039pt x 110.62366pt.
+<figure/detection.png, id=223, 385.44pt x 63.98906pt>
+File: figure/detection.png Graphic file (type png)
+<use figure/detection.png>
+Package pdftex.def Info: figure/detection.png  used on input line 117.
+(pdftex.def)             Requested size: 168.71353pt x 28.0088pt.
+<figure/confidence.png, id=224, 388.45125pt x 53.44969pt>
+File: figure/confidence.png Graphic file (type png)
+<use figure/confidence.png>
+Package pdftex.def Info: figure/confidence.png  used on input line 124.
+(pdftex.def)             Requested size: 168.71353pt x 23.21452pt.
+<figure/algorithm.png, id=225, 307.90031pt x 397.485pt>
+File: figure/algorithm.png Graphic file (type png)
+<use figure/algorithm.png>
+Package pdftex.def Info: figure/algorithm.png  used on input line 131.
+(pdftex.def)             Requested size: 120.5102pt x 155.57045pt.
+<figure/iou.png, id=226, 378.66469pt x 164.86594pt>
+File: figure/iou.png Graphic file (type png)
+<use figure/iou.png>
+Package pdftex.def Info: figure/iou.png  used on input line 138.
+(pdftex.def)             Requested size: 120.5102pt x 52.46886pt.
+<figure/test-attack.png, id=227, 800.9925pt x 344.03531pt>
+File: figure/test-attack.png Graphic file (type png)
+<use figure/test-attack.png>
+Package pdftex.def Info: figure/test-attack.png  used on input line 145.
+(pdftex.def)             Requested size: 241.02039pt x 103.5211pt.
+)
+(./sections/experiments.tex [6]) (./sections/discussion.tex)
+(./sections/related-work.tex [7 <./figure/test-pipeline.png (PNG copy)> <./figu
+re/detection.png (PNG copy)> <./figure/confidence.png (PNG copy)> <./figure/alg
+orithm.png (PNG copy)> <./figure/iou.png (PNG copy)> <./figure/test-attack.png 
+(PNG copy)>]) (./main.bbl
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1019,12 +1042,12 @@ Underfull \hbox (badness 1622) in paragraph at lines 31--34
 onalthinking .
  []
 
-[6 <./figure/lidar.png>]
+
 Underfull \hbox (badness 4266) in paragraph at lines 71--77
 []\T1/ptm/m/n/10 (+20) Angel X. Chang, Thomas Funkhouser, Leonidas
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 149--154
 []\T1/ptm/m/n/10 (+20) Lars M. Mescheder, Michael Oech-sle, Michael
  []
@@ -1034,34 +1057,40 @@ Underfull \hbox (badness 2970) in paragraph at lines 149--154
 \T1/ptm/m/n/10 (+20) Oc-cu-pancy net-works: Learn-ing 3d re-con-struc-tion
  []
 
-[7 <./figure/segmentation.png>]) [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 144.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 144.
+) [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 144.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 144.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1B483422D6D15D970F21F796BFC2CF68;1134.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 144.
+(rerunfilecheck)             Checksum: A62532F68B3F6F8B8B22FA3602CEBA79;1027.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 21093 strings out of 481239
- 393745 string characters out of 5920376
- 671074 words of memory out of 5000000
- 35615 multiletter control sequences out of 15000+600000
- 589176 words of font info for 214 fonts, out of 8000000 for 9000
+ 21120 strings out of 481239
+ 394120 string characters out of 5920376
+ 669219 words of memory out of 5000000
+ 35648 multiletter control sequences out of 15000+600000
+ 581170 words of font info for 202 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,9n,96p,405b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,9n,96p,405b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 505833 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/sym
+bol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (9 pages, 515530 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 321 compressed objects within 4 object streams
- 79 named destinations out of 1000 (max. 500000)
- 38171 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 358 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 33555 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.10.27)  1 MAY 2022 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.5.1)  2 MAY 2022 03:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -697,88 +697,10 @@ Package filecontents Warning: This package is obsolete. Disabling it and
 (filecontents)                passing control to the filecontents environment
 (filecontents)                defined by the LaTeX kernel.
 
-) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
-
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count292
-\float@exts=\toks37
-\float@box=\box58
-\@float@everytoks=\toks38
-\@floatcapt=\box59
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\@float@every@algorithm=\toks39
-\c@algorithm=\count293
-)
-(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
-Package: algpseudocode 
-
-(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
-Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
-
-Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count294
-\c@ALG@rem=\count295
-\c@ALG@nested=\count296
-\ALG@tlm=\skip54
-\ALG@thistlm=\skip55
-\c@ALG@Lnr=\count297
-\c@ALG@blocknr=\count298
-\c@ALG@storecount=\count299
-\c@ALG@tmpcounter=\count300
-\ALG@tmplength=\skip56
-)
-Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
-Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
-Package: todonotes 2018/11/22
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryshadows.code.tex
-File: tikzlibraryshadows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryfadings.code.tex
-File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code
-.tex
-File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-))) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count301
-\calc@Bcount=\count302
-\calc@Adimen=\dimen264
-\calc@Bdimen=\dimen265
-\calc@Askip=\skip57
-\calc@Bskip=\skip58
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count303
-\calc@Cskip=\skip59
-)
-\c@@todonotes@numberoftodonotes=\count304
-)
-(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
-\CommentStream=\write4
-
-Excluding comment 'comment')
-(/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
-Package: gensymb 2003/07/02 v1.0 (WaS)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count305
-\l__pdf_internal_box=\box60
+\l__kernel_color_stack_int=\count292
+\l__pdf_internal_box=\box58
 )
 (./main.aux)
 \openout1 = `main.aux'.
@@ -829,17 +751,17 @@ Package microtype Warning: \nonfrenchspacing is active. Adjustment of
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen266
-\scratchbox=\box61
-\nofMPsegments=\count307
-\nofMParguments=\count308
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen267
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count293
+\scratchdimen=\dimen264
+\scratchbox=\box59
+\nofMPsegments=\count294
+\nofMParguments=\count295
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count296
+\MPscratchDim=\dimen265
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
+\everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -849,7 +771,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box62
+\AtBeginShipoutBox=\box60
 Package hyperref Info: Link coloring ON on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -861,40 +783,22 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count312
+\c@section@level=\count299
 )
 LaTeX Info: Redefining \ref on input line 75.
 LaTeX Info: Redefining \pageref on input line 75.
 LaTeX Info: Redefining \nameref on input line 75.
 
 (./main.out) (./main.out)
-\@outlinefile=\write5
-\openout5 = `main.out'.
+\@outlinefile=\write4
+\openout4 = `main.out'.
 
  ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-
-Package todonotes Warning: The length marginparwidth is less than 2cm and will 
-most likely cause issues with the appearance of inserted todonotes. The issue c
-an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
-loading the todonotes package. on input line 75.
-
-LaTeX Info: Redefining \celsius on input line 75.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 75.
-
-
-Package gensymb Warning: Not defining \perthousand.
-
-LaTeX Info: Redefining \ohm on input line 75.
-Package gensymb Info: Using \upOmega for \ohm on input line 75.
-
-Package gensymb Warning: Not defining \micro.
-
 LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line
  94.
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
@@ -929,75 +833,115 @@ Underfull \hbox (badness 1735) in paragraph at lines 105--106
 ap}
 
 
-] [2]) (./sections/background.tex
-
-LaTeX Warning: Reference `fig:module' on page 3 undefined on input line 17.
-
-
-LaTeX Warning: Reference `fig:synthe' on page 3 undefined on input line 36.
-
-
-LaTeX Warning: Reference `fig:attack-pipe' on page 3 undefined on input line 59
-.
-
-[3]) (./sections/attackmodel.tex
-
-LaTeX Warning: Reference `fig:noisy' on page 4 undefined on input line 29.
-
-[4]) (./sections/approach.tex [5]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
-3.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-<figure/test-pipeline.png, id=222, 954.56625pt x 438.13687pt>
-File: figure/test-pipeline.png Graphic file (type png)
-<use figure/test-pipeline.png>
-Package pdftex.def Info: figure/test-pipeline.png  used on input line 110.
-(pdftex.def)             Requested size: 241.02039pt x 110.62366pt.
-<figure/detection.png, id=223, 385.44pt x 63.98906pt>
-File: figure/detection.png Graphic file (type png)
-<use figure/detection.png>
-Package pdftex.def Info: figure/detection.png  used on input line 117.
-(pdftex.def)             Requested size: 168.71353pt x 28.0088pt.
-<figure/confidence.png, id=224, 388.45125pt x 53.44969pt>
-File: figure/confidence.png Graphic file (type png)
-<use figure/confidence.png>
-Package pdftex.def Info: figure/confidence.png  used on input line 124.
-(pdftex.def)             Requested size: 168.71353pt x 23.21452pt.
-<figure/algorithm.png, id=225, 307.90031pt x 397.485pt>
-File: figure/algorithm.png Graphic file (type png)
-<use figure/algorithm.png>
-Package pdftex.def Info: figure/algorithm.png  used on input line 131.
-(pdftex.def)             Requested size: 120.5102pt x 155.57045pt.
-<figure/iou.png, id=226, 378.66469pt x 164.86594pt>
-File: figure/iou.png Graphic file (type png)
-<use figure/iou.png>
-Package pdftex.def Info: figure/iou.png  used on input line 138.
-(pdftex.def)             Requested size: 120.5102pt x 52.46886pt.
-<figure/test-attack.png, id=227, 800.9925pt x 344.03531pt>
-File: figure/test-attack.png Graphic file (type png)
-<use figure/test-attack.png>
-Package pdftex.def Info: figure/test-attack.png  used on input line 145.
-(pdftex.def)             Requested size: 241.02039pt x 103.5211pt.
-)
-(./sections/experiments.tex [6]) (./sections/discussion.tex)
-(./sections/related-work.tex [7 <./figure/test-pipeline.png (PNG copy)> <./figu
-re/detection.png (PNG copy)> <./figure/confidence.png (PNG copy)> <./figure/alg
-orithm.png (PNG copy)> <./figure/iou.png (PNG copy)> <./figure/test-attack.png 
-(PNG copy)>]) (./main.bbl
+]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 90.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 90.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 90.
+ [2]) (./sections/background.tex [3]
+<figure/structure.png, id=166, 1267.73625pt x 416.55624pt>
+File: figure/structure.png Graphic file (type png)
+<use figure/structure.png>
+Package pdftex.def Info: figure/structure.png  used on input line 99.
+(pdftex.def)             Requested size: 192.81703pt x 63.35152pt.
+<figure/synthesized.png, id=168, 604.50844pt x 168.63pt>
+File: figure/synthesized.png Graphic file (type png)
+<use figure/synthesized.png>
+Package pdftex.def Info: figure/synthesized.png  used on input line 106.
+(pdftex.def)             Requested size: 192.81703pt x 53.78516pt.
+<figure/attack-pipeline.png, id=169, 676.77844pt x 278.54062pt>
+File: figure/attack-pipeline.png Graphic file (type png)
+<use figure/attack-pipeline.png>
+Package pdftex.def Info: figure/attack-pipeline.png  used on input line 113.
+(pdftex.def)             Requested size: 192.81703pt x 79.35515pt.
+) (./sections/attackmodel.tex
 
+LaTeX Warning: Reference `fig: noisy' on page 4 undefined on input line 29.
+
+[4 <./figure/structure.png> <./figure/synthesized.png (PNG copy)> <./figure/att
+ack-pipeline.png (PNG copy)>]
+Underfull \vbox (badness 1082) has occurred while \output is active []
+
+<figure/iou.png, id=189, 378.66469pt x 164.86594pt>
+File: figure/iou.png Graphic file (type png)
+<use figure/iou.png>
+Package pdftex.def Info: figure/iou.png  used on input line 86.
+(pdftex.def)             Requested size: 120.5102pt x 52.46886pt.
+<figure/test-pipeline.png, id=190, 954.56625pt x 438.13687pt>
+File: figure/test-pipeline.png Graphic file (type png)
+<use figure/test-pipeline.png>
+Package pdftex.def Info: figure/test-pipeline.png  used on input line 95.
+(pdftex.def)             Requested size: 177.06071pt x 81.26797pt.
+<figure/test-attack.png, id=191, 800.9925pt x 344.03531pt>
+File: figure/test-attack.png Graphic file (type png)
+<use figure/test-attack.png>
+Package pdftex.def Info: figure/test-attack.png  used on input line 101.
+(pdftex.def)             Requested size: 177.06071pt x 76.04497pt.
+<figure/benign&ma.png, id=192, 707.64375pt x 296.10625pt>
+File: figure/benign&ma.png Graphic file (type png)
+<use figure/benign&ma.png>
+Package pdftex.def Info: figure/benign&ma.png  used on input line 127.
+(pdftex.def)             Requested size: 241.02039pt x 100.851pt.
+<figure/detection-rate-b.png, id=193, 576.1525pt x 424.58624pt>
+File: figure/detection-rate-b.png Graphic file (type png)
+<use figure/detection-rate-b.png>
+Package pdftex.def Info: figure/detection-rate-b.png  used on input line 136.
+(pdftex.def)             Requested size: 177.06071pt x 130.48013pt.
+<figure/conf-rate-b.png, id=194, 563.10374pt x 422.57875pt>
+File: figure/conf-rate-b.png Graphic file (type png)
+<use figure/conf-rate-b.png>
+Package pdftex.def Info: figure/conf-rate-b.png  used on input line 142.
+(pdftex.def)             Requested size: 177.06071pt x 132.87442pt.
+)
+(./sections/approach.tex [5 <./figure/iou.png (PNG copy)>]
+Underfull \vbox (badness 1708) has occurred while \output is active []
+
+ [6 <./figure/test-pipeline.png (PNG copy)> <./figure/test-attack.png (PNG copy
+)> <./figure/benign&ma.png>]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
+3.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+<figure/detection.png, id=221, 385.44pt x 63.98906pt>
+File: figure/detection.png Graphic file (type png)
+<use figure/detection.png>
+Package pdftex.def Info: figure/detection.png  used on input line 112.
+(pdftex.def)             Requested size: 168.71353pt x 28.0088pt.
+<figure/confidence.png, id=222, 388.45125pt x 53.44969pt>
+File: figure/confidence.png Graphic file (type png)
+<use figure/confidence.png>
+Package pdftex.def Info: figure/confidence.png  used on input line 119.
+(pdftex.def)             Requested size: 168.71353pt x 23.21452pt.
+<figure/algorithm.png, id=223, 307.90031pt x 397.485pt>
+File: figure/algorithm.png Graphic file (type png)
+<use figure/algorithm.png>
+Package pdftex.def Info: figure/algorithm.png  used on input line 126.
+(pdftex.def)             Requested size: 120.5102pt x 155.57045pt.
+<figure/detection-de.png, id=224, 573.14125pt x 437.635pt>
+File: figure/detection-de.png Graphic file (type png)
+<use figure/detection-de.png>
+Package pdftex.def Info: figure/detection-de.png  used on input line 136.
+(pdftex.def)             Requested size: 177.06071pt x 135.198pt.
+<figure/conf-de.png, id=225, 608.2725pt x 444.66125pt>
+File: figure/conf-de.png Graphic file (type png)
+<use figure/conf-de.png>
+Package pdftex.def Info: figure/conf-de.png  used on input line 142.
+(pdftex.def)             Requested size: 177.06071pt x 129.43019pt.
+)
+(./sections/experiments.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./figure/detection-rate-b.png> <./figure/conf-rate-b.png> <./figure/detect
+ion.png (PNG copy)>] [8 <./figure/confidence.png (PNG copy)> <./figure/algorith
+m.png (PNG copy)>]) (./sections/related-work.tex [9 <./figure/detection-de.png>
+ <./figure/conf-de.png>]) (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/ptm/m/n/10 (+20) The 6 lev-els of ve-hi-cle au-ton-omy ex-plained.
  []
@@ -1014,71 +958,79 @@ Underfull \hbox (badness 5147) in paragraph at lines 4--8
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 20--24
+Underfull \hbox (badness 1067) in paragraph at lines 10--13
+\T1/pcr/m/n/10 / / www . youtube . com / watch ? v = npQMzH3j _ d8$[][]\T1/ptm/
+m/n/10 (+20) .  Ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
+[]\T1/ptm/m/n/10 (+20) carma-platform.  [][]$\T1/pcr/m/n/10 https : / / github 
+. com /
+ []
+
+
+Underfull \hbox (badness 4765) in paragraph at lines 25--28
+\T1/pcr/m/n/10 usdot-[]fhwa-[]stol / carma-[]platform$[][]\T1/ptm/m/n/10 (+20) 
+.  Ac-cessed:
+ []
+
+
+Underfull \hbox (badness 2409) in paragraph at lines 30--34
 []\T1/ptm/m/n/10 (+20) Companies are rac-ing to make self-driving cars.
  []
 
 
-Underfull \hbox (badness 3735) in paragraph at lines 20--24
+Underfull \hbox (badness 3735) in paragraph at lines 30--34
 \T1/ptm/m/n/10 (+20) but why?  [][]$\T1/pcr/m/n/10 https : / / www . washington
 post . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
 \T1/pcr/m/n/10 outlook / 2022 / 02 / 04 / self-[]driving-[]cars-[]why$[][]\T1/p
 tm/m/n/10 (+20) .
  []
 
 
-Underfull \hbox (badness 2582) in paragraph at lines 26--29
+Underfull \hbox (badness 2582) in paragraph at lines 36--39
 []\T1/ptm/m/n/10 (+20) Mcgill 3d shape bench-mark.  [][]$\T1/pcr/m/n/10 http : 
 / / www . cim .
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 31--34
+Underfull \hbox (badness 1622) in paragraph at lines 41--44
 []\T1/ptm/m/n/10 (+20) Ray trac-ing.  [][]$\T1/pcr/m/n/10 https : / / computati
 onalthinking .
  []
 
 
-Underfull \hbox (badness 4266) in paragraph at lines 71--77
-[]\T1/ptm/m/n/10 (+20) Angel X. Chang, Thomas Funkhouser, Leonidas
+Underfull \hbox (badness 10000) in paragraph at lines 77--82
+\T1/ptm/m/n/10 (+20) Mat-teo Dellepi-ane, Fabio Ganov-elli, and Guido
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
-[]\T1/ptm/m/n/10 (+20) Lars M. Mescheder, Michael Oech-sle, Michael
- []
-
-
-Underfull \hbox (badness 2970) in paragraph at lines 149--154
-\T1/ptm/m/n/10 (+20) Oc-cu-pancy net-works: Learn-ing 3d re-con-struc-tion
- []
-
-) [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
+[10]) [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A62532F68B3F6F8B8B22FA3602CEBA79;1027.
+(rerunfilecheck)             Checksum: BCD9A53FFB587997762BE3AEEFB5B4A6;992.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
  ) 
 Here is how much of TeX's memory you used:
- 21120 strings out of 481239
- 394120 string characters out of 5920376
- 669219 words of memory out of 5000000
- 35648 multiletter control sequences out of 15000+600000
- 581170 words of font info for 202 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 60i,9n,96p,405b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 20063 strings out of 483183
+ 374182 string characters out of 5966293
+ 643376 words of memory out of 5000000
+ 34372 multiletter control sequences out of 15000+600000
+ 584059 words of font info for 208 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 60i,9n,96p,405b,605s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
@@ -1087,10 +1039,10 @@ type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/sym
 bol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (9 pages, 515530 bytes).
+Output written on main.pdf (11 pages, 883822 bytes).
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
+ 377 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
  78 named destinations out of 1000 (max. 500000)
- 33555 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 37579 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -6,6 +6,11 @@ The 6 levels of vehicle autonomy explained.
   \url{https://www.synopsys.com/automotive/autonomous-driving-levels.html}.
 \newblock Accessed: 2022-03-05.
 
+\bibitem{autodrive}
+Autoware self-driving vehicle on a highway.
+\newblock \url{https://www.youtube.com/watch?v=npQMzH3j_d8}.
+\newblock Accessed: 2022-03-05.
+
 \bibitem{autoware}
 Autoware.ai.
 \newblock \url{https://www.autoware.org/}.
@@ -14,6 +19,11 @@ Autoware.ai.
 \bibitem{apollo}
 Baidu apollo.
 \newblock \url{https://github.com/ApolloAuto/apollo}.
+\newblock Accessed: 2022-03-05.
+
+\bibitem{usdot}
+carma-platform.
+\newblock \url{https://github.com/usdot-fhwa-stol/carma-platform}.
 \newblock Accessed: 2022-03-05.
 
 \bibitem{1}
@@ -36,21 +46,11 @@ Ray tracing.
 Taxonomy and definitions for terms related to driving automation systems for
   on-road motor vehicles.
 
-\bibitem{implicit}
-1 implicit function theorems.
-\newblock 2019.
-
 \bibitem{4}
 Mazen Abdelfattah, Kaiwen Yuan, Z.~Jane Wang, and Rabab~Kreidieh Ward.
 \newblock Towards universal physical attacks on cascaded camera-lidar 3d object
   detection models.
 \newblock In {\em ICIP}, 2021.
-
-\bibitem{mls}
-M.~Alexa, J.~Behr, D.~Cohen-Or, S.~Fleishman, D.~Levin, and C.T. Silva.
-\newblock Point set surfaces.
-\newblock {\em Proceedings of the Conference on Visualization}, 35-36:21--28,
-  2001.
 
 \bibitem{msf-adv}
 Yulong Cao, Ningfei Wang, Chaowei Xiao, Dawei Yang, Jin Fang, Ruigang Yang, {Qi
@@ -67,19 +67,18 @@ Yulong Cao, Chaowei Xiao, Benjamin Cyr, Yimeng Zhou, Wonseok Park, Sara
 \newblock {\em Proceedings of the 2019 ACM SIGSAC Conference on Computer and
   Communications Security}, 2019.
 
-\bibitem{shapenet}
-Angel~X. Chang, Thomas Funkhouser, Leonidas Guibas, Pat Hanrahan, Qixing Huang,
-  Zimo Li, Silvio Savarese, Manolis Savva, Shuran Song, Hao Su, Jianxiong Xiao,
-  Li~Yi, and Fisher Yu.
-\newblock {ShapeNet: An Information-Rich 3D Model Repository}.
-\newblock Technical Report arXiv:1512.03012 [cs.GR], Stanford University ---
-  Princeton University --- Toyota Technological Institute at Chicago, 2015.
-
 \bibitem{7}
 Shang-Tse Chen and Jason Martin.
 \newblock Physical adversarial attack on object detectors ( extended abstract
   ).
 \newblock 2018.
+
+\bibitem{meshlab}
+Paolo Cignoni, Marco Callieri, Massimiliano Corsini, Matteo Dellepiane, Fabio
+  Ganovelli, and Guido Ranzuglia.
+\newblock {MeshLab: an Open-Source Mesh Processing Tool}.
+\newblock In Vittorio Scarano, Rosario~De Chiara, and Ugo Erra, editors, {\em
+  Eurographics Italian Chapter Conference}. The Eurographics Association, 2008.
 
 \bibitem{lidar}
 Ronald T.~H. Collis.
@@ -115,14 +114,6 @@ Davi Frossard and Raquel Urtasun.
 \newblock {\em 2018 IEEE International Conference on Robotics and Automation
   (ICRA)}, pages 635--642, 2018.
 
-\bibitem{dupnet}
-Hongxing Gao, Wei Tao, Dongchao Wen, Junjie Liu, Tse-Wei Chen, Kinya Osa, and
-  Masami Kato.
-\newblock Dupnet: Towards very tiny quantized cnn with improved accuracy for
-  face detection.
-\newblock {\em 2019 IEEE/CVF Conference on Computer Vision and Pattern
-  Recognition Workshops (CVPRW)}, pages 168--177, 2019.
-
 \bibitem{kitti}
 Andreas Geiger, Philip Lenz, Christoph Stiller, and Raquel Urtasun.
 \newblock Vision meets robotics: The kitti dataset.
@@ -145,27 +136,10 @@ Ming Liang, Binh Yang, Shenlong Wang, and Raquel Urtasun.
 \newblock Deep continuous fusion for multi-sensor 3d object detection.
 \newblock In {\em ECCV}, 2018.
 
-\bibitem{ONet}
-Lars~M. Mescheder, Michael Oechsle, Michael Niemeyer, Sebastian Nowozin, and
-  Andreas Geiger.
-\newblock Occupancy networks: Learning 3d reconstruction in function space.
-\newblock {\em 2019 IEEE/CVF Conference on Computer Vision and Pattern
-  Recognition (CVPR)}, pages 4455--4465, 2019.
-
-\bibitem{ConvONet}
-Songyou Peng, Michael Niemeyer, Lars~M. Mescheder, Marc Pollefeys, and Andreas
-  Geiger.
-\newblock Convolutional occupancy networks.
-\newblock {\em ArXiv}, abs/2003.04618, 2020.
-
-\bibitem{lgsvl}
-Guodong Rong, Byung~Hyun Shin, Hadi Tabatabaee, Qiang Lu, Steve Lemke, Martins
-  Mozeiko, Eric Boise, Geehoon Uhm, Mark Gerow, Shalin Mehta, Eugene Agafonov,
-  Tae~Hyung Kim, Eric Sterner, Keunhae Ushiroda, Michael Reyes, Dmitry
-  Zelenkovsky, and Seonman Kim.
-\newblock Lgsvl simulator: A high fidelity simulator for autonomous driving.
-\newblock {\em 2020 IEEE 23rd International Conference on Intelligent
-  Transportation Systems (ITSC)}, pages 1--6, 2020.
+\bibitem{yolo}
+Joseph Redmon and Ali Farhadi.
+\newblock Yolov3: An incremental improvement.
+\newblock {\em ArXiv}, abs/1804.02767, 2018.
 
 \bibitem{black-lidar}
 Jiachen Sun, Yulong Cao, Qi~Alfred Chen, and Z.~Morley Mao.
@@ -179,11 +153,6 @@ Jiachen Sun, Yulong Cao, Qi~Alfred Chen, and Z.~Morley Mao.
   black-box adversarial sensor attack and countermeasures.
 \newblock {\em ArXiv}, abs/2006.16974, 2020.
 
-\bibitem{L0}
-Yujing Sun, Scott Schaefer, and Wenping Wang.
-\newblock Denoising point sets via l0 minimization.
-\newblock {\em Comput. Aided Geom. Des.}, 35-36:2--15, 2015.
-
 \bibitem{19}
 James Tu, Mengye Ren, Sivabalan Manivasagam, Ming Liang, Binh Yang, Richard Du,
   Frank Cheng, and Raquel Urtasun.
@@ -191,13 +160,6 @@ James Tu, Mengye Ren, Sivabalan Manivasagam, Ming Liang, Binh Yang, Richard Du,
   detection.
 \newblock {\em 2020 IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR)}, pages 13713--13722, 2020.
-
-\bibitem{VG}
-Liying Wang, Yan Xu, and Yu~Li.
-\newblock A voxel-based 3d building detection algorithm for airborne lidar
-  point clouds.
-\newblock {\em Journal of the Indian Society of Remote Sensing}, 47:349--358,
-  2018.
 
 \bibitem{if-defense}
 Ziyi Wu, Yueqi Duan, He~Wang, Qingnan Fan, and Leonidas~J. Guibas.

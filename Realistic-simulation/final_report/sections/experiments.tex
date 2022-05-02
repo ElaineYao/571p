@@ -1,14 +1,101 @@
-\subsection{Experiment setup}
+\subsection{Evaluation Methodology and Setup}
+\textbf{Object detection model selection}
+In our evaluation, we target the object detection model provided in open-source industry-level AV systems to make our results more practical and realistic.
+Specifically, we choose the YOLOv3\cite{yolo} from the full-stack AV system, i.e., Autoware.AI\cite{autoware} because Autoware.AI is applied in USDOT\cite{usdot} and therefore the object detection neural network they're using is representative. 
+Besides, Autoware.AI has been installed in real physical driving vehicles and provided service on public roads\cite{autodrive}. 
+This makes this test also practical in the real physical world. 
+YOLOv3 also has a good performance as a real-time object detection algorithm and is widely used in the perception of AV system\cite{autoware}.
 
-For this project, we’ll use Baidu Apollo\cite{apollo} open-source AD
-system. It’s a widely-used industry-grade system equipped
-with the typical MSF algorithm. We’ll also use LGSVL simulator\cite{lgsvl}, an
-open-source simulator providing a virtual environment to test
-AV systems. To reproduce the attacks on camera and LiDAR,
-we use the Github repository\cite{msf-adv} provided by Cao \emph{et al.}. After
-generating adversarial objects with the tool mentioned, we’ll
-test our AV-based IF-defense\cite{if-defense} by processing the rendered 3D point cloud before feeding it into the pre-processing part in Figure
+\textbf{Synthesizing method selection}
+Considering that there are many implementations for synthesizing the rendered obstacle with the road background, we experiment with the synthesizing pipeline used in MSF-ADV\cite{msf-adv}. 
+MSF-ADV\cite{msf-adv} aims at designing adversarial obstacles which can fail both the camera and the LiDAR neural network detection. 
+Since it takes thousands of optimization rounds to generate the adversarial objects, 
+driving the physical vehicle on the road to get the camera and LiDAR sensor outputs with the updated obstacle in each optimization iteration is impractical. 
+As a result, they design a way to synthesize the attack-influenced physical world digitally to get the resulted camera images and LiDAR point clouds.
+The adversarial obstacle generated with the digitally synthesized scene is also tested in the physical world and proved to be effective.
+This shows that their synthesizing method might be realistic enough to simulate the physical world effect.
+Thus in our evaluation, we target the synthesizing method designed in MSF-ADV\cite{msf-adv}.
 
-As for the evaluation metric, we will measure 1) the detection accuracy of the adversarial obstacles
-, 2) the detection accuracy and false-positive of the overall obstacles, including the benign ones and adversarial ones.
+\textbf{Adversarial attack selection}
+Many prior works propose the physical adversarial attacks in AV systems, 
+such as putting the drones flying in front of the target vehicle\cite{25}, placing an adversarial object on the rooftop of the target vehicle to hide this vehicle from the LiDAR detector\cite{19}. 
+However, due to the MSF design in current AV systems, which can recover the correct sensor reading as long as there is at least one sensor available, these adversarial attacks will fail in this setting.
+Thus, MSF-ADV\cite{msf-adv} proposes a way to attack all fusion sensor sources at the same time.
+This is one of the most powerful attacks in perception modules in AV.
+Thus, in our evaluation, we will generate adversarial objects with the optimization-based method proposed by MSF-ADV\cite{msf-adv}.
 
+\textbf{3D object selection}
+
+Due to the practical object types for the camera models, 
+we experiment with 3 different shapes of chairs from McGill 3D Shape Benchmark\cite{McGill}:
+(1) a chair of size 0.6m * 0.5m * 1.5m, (2) a chair of size 0.4m * 0.7m *1.3m, and (3) a chair of size 0.7m * 0.6m * 1.1m.
+These chairs are represented in the form of 3D point cloud mesh. 
+Because the number of points is quite huge and brings a large overhead to the camera rendering process,
+we decrease the number of vertex and faces in the original 3D meshes with MeshLab\cite{meshlab}.
+It supports face reduction with high-quality preservation.
+We also scale the size of the chair according to the space in the background with MeshLab so it's more realizable in real life.
+
+\textbf{Driving scenario selection}
+For each chair with a certain shape, we select 5 real-world driving scenarios from the KITTI dataset\cite{msf-adv}. 
+Each driving scenario consists of the camera image, LiDAR point cloud, and the calibration matrix for each frame of sensor readings.
+KITTI offers various driving scenarios including different vehicles and roads with various properties.
+
+\subsection{Authenticity of Benign Synthesized Scenes}
+In this section, we evaluate the authenticity of the synthesized scene by measuring the performance of the object detection neural network.
+
+\textbf{Evaluation metrics.} Given a randomly generated obstacle, driving background, and the relative position, we feed the rendered obstacle and the synthesized driving scene into the YOLOv3 model and test whether the cars in the original background and the newly added obstacle can be detected by YOLOv3. 
+We use detection rate and confidence rate as metrics to measure the performance of YOLOv3 in the synthesized scene.
+Under this criterion, YOLOv3 should first successfully detect the obstacle in the blank background and the cars in the original driving background. 
+In other words, if YOLOv3 detects the original obstacle and cars in the background separately in the first place, it means the obstacle and cars are benign to YOLOv3.
+After synthesizing the obstacle with the driving background, a realistic scene should still allow YOLOv3 to detect the chair and equal amount of cars as it does in separate cases.
+A benign chair is the one without attack and thus should certainly be detected no matter what the background is.
+
+\textbf{Results.} 
+
+\emph{Finding 1: The benign obstacle (i.e. chair) fails to be detected in all the tested settings.}
+It means that when integrating the obstacle in the background, it’s quite hard for the YOLOv3 model to detect it. 
+This might be reasonable because perhaps the training dataset, didn’t cover a similar image and the model hasn’t seen a chair placed on the road. 
+Therefore, if we want to simulate putting any obstacle on the road, we may have to choose the obstacle, background, and model carefully. 
+As a result, the synthesized scene is not realistic enough especially for the chair, because the benign chair is never detected.
+\emph{Finding 2: The benign obstacle may also lead to the performance decline in neural networks(e.g., occlusion). }
+Fig. \ref{fig:det-b} and Fig. \ref{fig:conf-b} are the histograms for detection rate and confidence rate in benign objects. 
+We draw this with more than 60 test settings. 
+In Fig. \ref{fig:det-b}, for most cases, the detection rate is close to 1, which means it correctly detects all the cars in the background. 
+However, there are several cases where YOLOv3 fails to detect all the cars.
+This is because the chair might block the car and as the result, 
+the car is invisible to the neural network due to the occlusion.
+
+
+\subsection{Effectiveness of Adversarial Attacks on Malicious Scenes}
+\textbf{Evaluation metrics.}
+Given an obstacle, we generate the adversarial version with MSF-ADV\cite{msf-adv} method, feed the rendered obstacle and the synthesized driving scene into the YOLOv3 model, and test whether the cars and the adversarial obstacle can be detected by YOLOv3. 
+We use detection rate and confidence rate as metrics to measure the performance of YOLOv3 in the adversarial synthesized scene.
+Under this criterion, YOLOv3 should first successfully detect the cars in the synthesized background but fail to detect the adversarial obstacle.
+This is to measure the effectiveness of adversarial attacks in the synthesized scene.
+
+\textbf{Results. }
+
+\emph{Finding 1: When the NN fails to detect the benign obstacle (i.e. chair), it’s also hard to generate effective adversarial obstacles}
+Fig. \ref{fig:det-d} and Fig. \ref{fig:conf-d} are the histogram for delta detection rate and confidence rate. 
+The delta value is calculated by subtracting the result in benign cases from the result in adversarial cases.
+If the delta value is close to 0, it means that the adversarial object doesn't have much influence on the detection accuracy. 
+In Fig. \ref{fig:det-d}, we find for a large proportion of settings, the delta value is close to 0.
+We also find cases where the delta value is negative. which means that the adversarial object even improves the detection accuracy. 
+In this case, there are more than 13 cars in the background chosen and they occlude each other a little bit.
+As the result, the detection accuracy might be very sensitive to the position and size of the chair. 
+For the adversarial object, it may by accident improve the detection accuracy. 
+The same goes with Fig. \ref{fig:conf-d}, in which the negative delta value only appears when the background has countless cars.
+
+
+%For this project, we’ll use Baidu Apollo\cite{apollo} open-source AD
+%system. It’s a widely-used industry-grade system equipped
+%with the typical MSF algorithm. We’ll also use LGSVL simulator\cite{lgsvl}, an
+%open-source simulator providing a virtual environment to test
+%AV systems. To reproduce the attacks on camera and LiDAR,
+%we use the Github repository\cite{msf-adv} provided by Cao \emph{et al.}. After
+%generating adversarial objects with the tool mentioned, we’ll
+%test our AV-based IF-defense\cite{if-defense} by processing the rendered 3D point cloud before feeding it into the pre-processing part in Figure
+%
+%As for the evaluation metric, we will measure 1) the detection accuracy of the adversarial obstacles
+%, 2) the detection accuracy and false-positive of the overall obstacles, including the benign ones and adversarial ones.
+%

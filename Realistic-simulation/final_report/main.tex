@@ -64,11 +64,11 @@
 \usepackage{filecontents}
 
 % add algorithm
-\usepackage{algorithm}
-\usepackage{algpseudocode}
-\usepackage[colorinlistoftodos]{todonotes}
-\usepackage{comment}
-\usepackage{gensymb}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage{comment}
+%\usepackage{gensymb}
 
 
 %-------------------------------------------------------------------------------
@@ -97,21 +97,23 @@ University of British Columbia
  \begin{abstract}
 %-------------------------------------------------------------------------------
 \textbf{For Autonomous Vehicles(AVs), sensor perception is safety-critical. 
-Failures in object detection can cause disasters. 
-Despite various prior works on adversarial 3D physical attacks in AVs, all of them are simulating placing obstacles in the road with synthesized scene.
-However, the rendering functions to generate the synthesized scenes may not be able to ensure the physical consistency between the obstacle and the background.
-The real-world sensor perception is much more complicated. In this project, we present the study of authenticity issues of rendering-based synthesized scene in AV systems.
-We evaluate this by generating different synthesized scene and testing the performance of neural network on them.
-This allows us to quantify how realistic these scenes are and understand the impact of physical consistency in the scene on the effectiveness of generated adversarial objects.}
+	Failures in object detection can cause disasters. 
+	Despite various prior works on adversarial 3D physical attacks in AVs, all of them are simulating placing obstacles on the road with a synthesized scene.
+	However, the rendering functions to generate the synthesized scenes may not be able to ensure the physical consistency between the obstacle and the background.
+	The real-world sensor perception is much more complicated. In this project, we present the study of authenticity issues of rendering-based synthesized scenes in AV systems.
+	We evaluate this by generating different synthesized scenes and testing the performance of the neural network on them.
+	This allows us to quantify how realistic these scenes are and understand the impact of physical consistency in the scene on the effectiveness of generated adversarial objects.}
 
 
-\textbf{We design a comprehensive test suite aiming at evaluating the whether the method to integrate an 3D object in the road background is realistic or not.
-We adopt empirical approaches that address four main design challenges: 
-various impact factors, physical environment consistency, domain-specific metrics and automated pipeline.
-We evaluate the synthesized scene with our test suite in representative open-source industry-grade AD system object detection models with real-world driving scenarios.
-We also choose state-of-art adversarial 3D physical attack for evaluation in malicious cases.
-Our results show that most synthesized scenes are not realistic enough so that the object detection fail to detect the obstacles in it.
-Such phenomenon can reduce the effectiveness guarantee of generated 3D adversarial attacks in physical world.}
+\textbf{We design a comprehensive test suite aiming at evaluating whether the method to integrate a 3D object in the road background is realistic or not.
+	We adopt empirical approaches that address four main design challenges: 
+	various impact factors, physical environment consistency, domain-specific metrics, and automated pipeline.
+	We evaluate the synthesized scene with our test suite in representative open-source industry-grade AD system object detection models with real-world driving scenarios.
+	We also choose a state-of-art adversarial 3D physical attack for evaluation in malicious cases.
+	Our results show that most synthesized scenes are not realistic enough so the object detection fails to detect the obstacles in it.
+	Such a phenomenon can reduce the effectiveness guarantee of generated 3D adversarial attacks in the physical world.}
+
+
 
 
  \end{abstract}
@@ -134,8 +136,8 @@ Such phenomenon can reduce the effectiveness guarantee of generated 3D adversari
 \section{Experiments}
 \input{sections/experiments}
 
- \section{Discussions}
- \input{sections/discussion}
+% \section{Discussions}
+% \input{sections/discussion}
 
 \section{Related Work}
 \input{sections/related-work}

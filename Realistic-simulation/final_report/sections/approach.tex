@@ -1,77 +1,77 @@
-In this project, we address the 4 aforementioned challenges by designing an automatic and comprehensive test suites for synthesized scenes,
+In this project, we address the 4 aforementioned challenges by designing an automatic and comprehensive test suite for synthesized scenes,
 which provides ways for evaluating the authenticity of the rendering methods used in MSF-ADV\cite{msf-adv}.
 
 \subsection{Overview}
 
 To address the challenges in Section 5.2, our test suite has the following designs;
 
-\textbf{Different driving backgrounds, 3D obstacle properties and their interaction}. 
-To address \textbf{C1}, through our preliminary experiments, we choose driving backgrounds with different degree of crowdness, 
-3D obstacle with various colors, shapes and texture, and the relative position between the background and the obstacle.
+\textbf{Different driving backgrounds, 3D obstacle properties, and their interaction}. 
+To address \textbf{C1}, through our preliminary experiments, we choose driving backgrounds with different degrees of crowdedness, 
+The 3D obstacle with various colors, shapes, and textures, and the relative position between the background and the obstacle.
 Fig. \ref{fig:test-pipe} is the overview of the automated test suite pipeline for the synthesized scenes.
 
-For road backgrounds, 5 different driving scenarios are chosen according the number of cars, the light condition, the shape of the road and the emptyness of the road.
+For road backgrounds, 5 different driving scenarios are chosen according to the number of cars, the light condition, the shape of the road, and the emptiness of the road.
 As we can notice, some background has more than 13 cars while for others there are only 2~5 cars.
-The number of cars will influence the performance of object detection neural network as it's easier to have occlusion between the obstacle with the cars in the background when there are more cars.
-The result of neural network will be quite sensitive to the position of the obstacle when the road is more crowded.
+The number of cars will influence the performance of the object detection neural network as it's easier to have occlusion between the obstacle with the cars in the background when there are more cars.
+The result of the neural network will be quite sensitive to the position of the obstacle when the road is more crowded.
 These 5 backgrounds are with different light conditions also. 
 For some backgrounds, the shadow of the trees takes up half part of the road while in other backgrounds there is less shadow on the road and even now shadows.
 The shadow area will affect the object detection accuracy in a way that obstacles put in the shadow are harder to be detected, 
 especially when the color of the obstacle is quite dark.
 
-For 3D obstacle properties, we first choose different shapes objects of the same type.
-Considering that chair is quite common and easy to obtain in real life, 
-we choose the chair as our target benign obstacle and also use 3 different shapes of chair for generality.
+For 3D obstacle properties, we first choose different shapes of objects of the same type.
+Considering that the chair is quite common and easy to obtain in real life, 
+we choose the chair as our target benign obstacle and also use 3 different shapes of the chair for generality.
 We also change the color and the facing angle of the chair.
-The original color is wood brown, however, this is easy not to be detected when the it's under shadow or close to soil.
-Therefore we also choose the bright colors, i.e., blue and pink for the chair.
-Also we rotate the chair for random angles as the angles in which the chair is put will also affect the detection performance.
-A chair with full view will be detected easily  while a chair with only side view is harder to be detected and recognized as the chair.
+The original color is wood brown, however, this is easy not to be detected when it's under shadow or close to the soil.
+Therefore we also choose bright colors, i.e., blue and pink for the chair.
+Also, we rotate the chair for random angles as the angles in which the chair is put will also affect the detection performance.
+A chair with a full view will be detected easily while a chair with only a side view is harder to be detected and recognized as the chair.
 
-For the interaction between the obstacle and the background, we adjust the position of the chair in both x axis and y axis.
-For a chair which is close to the camera, it's easier to be detected while for a chair which is far from the camera, it's the opposite case.
-We implement the distance between the chair and the camera by adjusting its position in x axis.
+For the interaction between the obstacle and the background, we adjust the position of the chair on both the x-axis and y-axis.
+For a chair that is close to the camera, it's easier to be detected while for a chair that is far from the camera, it's the opposite case.
+We implement the distance between the chair and the camera by adjusting its position on the x-axis.
 The position of the chair will affect the occlusion. 
-For example, if the chair is at the left side of the road and there happens to be a car here. 
+For example, if the chair is on the left side of the road and there happens to be a car here. 
 The chair may block the car and prevent it to be detected.
-However, if the chair is at the right side, there won't be occlusion then.
+However, if the chair is on the right side, there won't be occlusion then.
 
 The attacker can easily simulate this by choosing an object with different shapes and colors and putting it on the road.
 
 \textbf{Adjust the size of the object along with its position.}
 To address \textbf{C2}, we adopt camera imaging theory to adjust the height of the object so that it's standing on the road.
-For example, if the obstacle is far from the camera, simply cropping the obstacle image and integrating it with a farther position in x axis won't help.
+For example, if the obstacle is far from the camera, simply cropping the obstacle image and integrating it with a farther position on the x-axis won't help.
 It's likely to hit the road as the size of the obstacle should also shrink along with the increase of the distance to the camera.
-In the same way, if the obstacle is close to the camera, simply moving it closer in x axis will likely cause the object to float in the air.
+In the same way, if the obstacle is close to the camera, simply moving it closer on the x-axis will likely cause the object to float in the air.
 The size of the object should also increase when it's closer to the camera.
 We do experiments on our backgrounds and take the following equation to model the relationship between the obstacle size and the distance between it and the camera.
 \begin{equation}
 	z = -1.73 + r/2
 \end{equation}
-Here \(z\) represents the distance between the obstacle and the camera in the unit of meter. \(r\) represents the scaling factor of the size of the obstacle.
+Here \(z\) represents the distance between the obstacle and the camera in the unit of meters. \(r\) represents the scaling factor of the size of the obstacle.
 Moving the obstacle away or closer to the camera with the corresponding scaling factor in the equation ensures 
 that the obstacle is standing on the ground without floating or hitting the ground.
 
-On the other hand, we also consider the light condition to be complied with the driving background.
-When there is shadow in the background which is caused by the sunlight from certain direction, 
-an obstacle putting on the road should also has the similar shadow to ensure the physical consistency.
-In order to produce the similar light condition, 
-we consider the direction and intensity of the light when we're using camera rendering function to get the 2D image.
+On the other hand, we also consider the light condition to comply with the driving background.
+When there is a shadow in the background which is caused by the sunlight from a certain direction, 
+an obstacle putting on the road should also have a similar shadow to ensure physical consistency.
+To produce a similar light condition, 
+we consider the direction and intensity of the light when we're using the camera rendering function to get the 2D image.
 Also, we start with normal obstacles which can be obtained from
 life easily, e.g., a common chair.
 This is a fair assumption as getting the original obstacle shouldn't be difficult for the attacker.
 
 \textbf{Detection rate and Confidence rate}
-To address \textbf{C3}, we parse the output of object detection neural networks, i.e., detected bounding box, object label and confidence scores.
+To address \textbf{C3}, we parse the output of object detection neural networks, i.e., detected bounding box, object label, and confidence scores.
 Then we introduce two metrics, i.e., detection rate and confidence rate to measure the performance of the neural networks.
 Specifically, Fig. \ref{fig:algo} shows the overview of the algorithm to get the total confidence scores and the correctly detected objects.
 Here we choose YOLOv3 as our target neural network as it's used in Autoware.AI\cite{autoware} for object detection. 
-The output of YOLOv3 includes the bounding box, label and the confidence score.
-Bounding box is used to describe the position of the detected object. 
-The most important part in object detection is detecting the obstacle in the right place.
+The output of YOLOv3 includes the bounding box, label, and confidence score.
+The bounding box is used to describe the position of the detected object. 
+The most important part of object detection is detecting the obstacle in the right place.
 Here we use the Intersection over Union(IoU) to describe the extent of overlap of two objects.
 Fig. \ref{fig:iou} shows the equation to calculate IoU.
-We divide the area of overlap of two objects, i.e., the ground truth bounding box and the detected bounding box, with the area of union of two objects.
+We divide the area of overlap of two objects, i.e., the ground truth bounding box and the detected bounding box, with the area of the union of two objects.
 If the calculated IoU is close to 1, it means the detected bounding box almost overlaps with the ground truth and the detection position for the obstacle is correct.
 We set a threshold $\alpha$ to compare with the calculated IoU to decide if the detection position is correct.
 
@@ -81,36 +81,31 @@ And we think this obstacle is detected correctly.
 Therefore we record the confidence score of this detection result and count this as a correctly detected object.
 
 In the end, we use the equation in Fig. \ref{fig:detection} and Fig. \ref{fig:conf} to calculate the detection rate and confidence rate.
-Detection rate is used to measure the percentage of correctly detected objects 
+The detection rate is used to measure the percentage of correctly detected objects 
 and the confidence rate is used to measure the average confidence scores per object.
 By comparing these two metrics in synthesized scenes with different settings, 
 we can evaluate the performance of the neural network and therefore the authenticity of these scenes.
 
 \textbf{Automated pipeline for test suites} 
-To address \textbf{C4}, we need to design automated pipelines for the whole testing process to improve the efficiency.
+To address \textbf{C4}, we need to design automated pipelines for the whole testing process to improve efficiency.
 In Fig. \ref{fig:test-pipe}, we first randomly choose one kind of chair as our target obstacle.
 Then we randomly choose the color between wood brown, blue and pink.
-The colored chair will be rotate with random angle in [0\textdegree, 180\textdegree].
-Meanwhile, a road background will picked randomly to serve as the driving scenario.
-We also shift the position of the chair in both x axis and y axis.
-The shifting range in x axis is set to be in [4m, 8.5m] and the shifting range in y axis is set to be in [-8m, 8m].
-While we're shifting the obstacle, we also scale the size of the object according the camera imaging equation to ensure the physical consistency.
-Then we render this obstacle with the certain background to get the 2D images.
+The colored chair will be rotated at a random angle in [0\textdegree, 180\textdegree].
+Meanwhile, a road background will be picked randomly to serve as the driving scenario.
+We also shift the position of the chair on both the x-axis and the y-axis.
+The shifting range in the x-axis is set to be in [4m, 8.5m] and the shifting range in the y-axis is set to be in [-8m, 8m].
+While we're shifting the obstacle, we also scale the size of the object according to the camera imaging equation to ensure physical consistency.
+Then we render this obstacle with a certain background to get the 2D images.
 This camera image is sent to the object detection neural network to get the detection rate and confidence rate of the final outputs.
 These are used to measure the authenticity of the benign synthesized image.
 
 In Fig. \ref{fig:test-att}, we generate the adversarial obstacle using MSF-ADV\cite{msf-adv}.
-Then we render the adversarial object with camera rendering function and integrate it with the background. 
+Then we render the adversarial object with the camera rendering function and integrate it with the background. 
 The generated 2D image is fed into the camera object detection neural network to get the detection rate and confidence rate of the adversarial synthesized scene.
 This is to measure the effectiveness of generated adversarial obstacles in the road background.
 
 %-----------
-\begin{figure}
-	\centering
-	\includegraphics[width=1\linewidth]{figure/test-pipeline.png}
-	\caption{Overview of the automated test suite pipeline for benign synthesized scenes.}
-	\label{fig:test-pipe}
-\end{figure}
+
 
 \begin{figure}
 	\centering
@@ -133,19 +128,24 @@ This is to measure the effectiveness of generated adversarial obstacles in the r
 	\label{fig:algo}
 \end{figure}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.5\linewidth]{figure/iou.png}
-	\caption{Intersection over Union(IoU)}
-	\label{fig:iou}
-\end{figure}
 
-\begin{figure}
+\begin{figure*}
 	\centering
-	\includegraphics[width=1\linewidth]{figure/test-attack.png}
-	\caption{Overview of the automated test suite for adversarial synthesized scenes.}
-	\label{fig:test-att}
-\end{figure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{figure/detection-de.png}
+		\caption{Delta detection rate}
+		\label{fig:det-d}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{figure/conf-de.png}
+		\caption{Delta confidence rate}
+		\label{fig:conf-d}
+	\end{subfigure}
+	\caption{Delta detection rate and confidence rate between benign objects and adversarial ones.}
+	\label{fig:delta}
+\end{figure*}
 
 %\begin{figure*}
 %	\centering
